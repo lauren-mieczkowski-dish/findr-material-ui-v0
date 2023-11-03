@@ -1,5 +1,5 @@
 const typography = {
-  fontFamily: "Nunito, sans-serif",
+  fontFamily: "Inter, sans-serif",
   fontWeightMedium: 700,
   fontWeightBold: 800,
   h1: {
