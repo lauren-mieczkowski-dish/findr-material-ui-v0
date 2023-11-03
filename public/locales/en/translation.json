@@ -3,12 +3,12 @@
     "drawer": {
       "menu": {
         "calendar": "Calendar",
-        "dashboard": "Dashboard",
+        "dashboard": "Connect",
         "help": "Help",
         "home": "Home",
         "projects": "Projects",
         "settings": "Settings",
-        "userManagement": "Users"
+        "userManagement": "Manage"
       }
     },
     "header": {
