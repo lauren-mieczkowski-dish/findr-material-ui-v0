@@ -64,7 +64,7 @@ const DeviceDialog = ({
     },
     validationSchema: Yup.object({
       macAddress: Yup.string()
-        .macAddress(t("common.validations.macAddress"))
+        .max(20, t("common.validations.max", { size: 20 }))
         .required(t("common.validations.required")),
       firstName: Yup.string()
         .max(20, t("common.validations.max", { size: 20 }))
