@@ -4,9 +4,9 @@
     "avatar": "",
     "disabled": false,
     "macAddress": "5A-C1-3F-95-75-BE",
-    "firstName": "Rhys",
+    "firstName": "mysensor123",
     "upConnector": "S3",
-    "lastName": "Arriaga",
+    "lastName": "s123",
     "deviceType": "Sensor"
   },
   {
@@ -14,9 +14,9 @@
     "avatar": "",
     "disabled": false,
     "macAddress": "52-B5-B4-C6-F5-81",
-    "firstName": "Laura",
+    "firstName": "mycam123",
     "upConnector": "Blob Store",
-    "lastName": "Core",
+    "lastName": "c123",
     "deviceType": "Camera"
   },
   {
@@ -24,9 +24,9 @@
     "avatar": "",
     "disabled": false,
     "macAddress": "B4-3B-27-66-32-0B",
-    "firstName": "Joshua",
+    "firstName": "thebestcameraever",
     "upConnector": "S3",
-    "lastName": "Jagger",
+    "lastName": "c567",
     "deviceType": "Camera"
   },
   {
@@ -34,9 +34,9 @@
     "avatar": "",
     "disabled": true,
     "macAddress": "5B-01-6B-62-8E-52",
-    "firstName": "Jason",
+    "firstName": "thisisagreatcamera",
     "upConnector": "S3",
-    "lastName": "Jimenez",
+    "lastName": "123c",
     "deviceType": "Camera"
   },
   {
@@ -44,9 +44,9 @@
     "avatar": "",
     "disabled": true,
     "macAddress": "57-CF-2D-0C-73-97",
-    "firstName": "Rhonda",
+    "firstName": "anotherimpeccablecamera",
     "upConnector": "Dynamo DB",
-    "lastName": "Mcguire",
+    "lastName": "89c1",
     "deviceType": "Camera"
   },
   {
@@ -54,9 +54,9 @@
     "avatar": "",
     "disabled": false,
     "macAddress": "B1-07-BE-02-F5-2B",
-    "firstName": "Aaron",
+    "firstName": "lookatthiscamera",
     "upConnector": "S3",
-    "lastName": "Moreno",
+    "lastName": "0c9c1",
     "deviceType": "Camera"
   },
   {
@@ -64,9 +64,9 @@
     "avatar": "",
     "disabled": false,
     "macAddress": "9B-B3-4A-E0-8F-22",
-    "firstName": "Carley",
+    "firstName": "iamacamera",
     "upConnector": "Dynamo DB",
-    "lastName": "Murray",
+    "lastName": "09kj0",
     "deviceType": "Camera"
   },
   {
@@ -74,9 +74,9 @@
     "avatar": "",
     "disabled": false,
     "macAddress": "9D-8F-3C-53-1D-97",
-    "firstName": "Cherise",
+    "firstName": "somanycameras",
     "upConnector": "Dynamo DB",
-    "lastName": "Owen",
+    "lastName": "j7j9df",
     "deviceType": "Camera"
   },
   {
@@ -84,9 +84,9 @@
     "avatar": "",
     "disabled": false,
     "macAddress": "BB-04-B3-4D-CC-A7",
-    "firstName": "Nathan",
+    "firstName": "notanothercamera",
     "upConnector": "S3",
-    "lastName": "Romero",
+    "lastName": "j9dgk",
     "deviceType": "Camera"
   },
   {
@@ -94,9 +94,9 @@
     "avatar": "",
     "disabled": false,
     "macAddress": "9E-E0-D8-5A-9F-D8",
-    "firstName": "Olivia",
+    "firstName": "bigcamera",
     "upConnector": "Dynamo DB",
-    "lastName": "Spence",
+    "lastName": "j8ffgj",
     "deviceType": "Camera"
   },
   {
@@ -104,9 +104,9 @@
     "avatar": "",
     "disabled": false,
     "macAddress": "5D-3D-30-93-2B-F0",
-    "firstName": "Elisha",
+    "firstName": "smallcamera",
     "upConnector": "Dynamo DB",
-    "lastName": "Wade",
+    "lastName": "009dsf8nfjf",
     "deviceType": "Camera"
   }
 ]
