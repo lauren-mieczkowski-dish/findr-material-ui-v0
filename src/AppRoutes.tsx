@@ -37,7 +37,7 @@ const UnderConstructions = lazy(
 const Landing = lazy(() => import("./landing/pages/Landing"));
 
 // Devices
-const DeviceManagement = lazy(() => import("./users/pages/DeviceManagement"));
+const DeviceManagement = lazy(() => import("./devices/pages/DeviceManagement"));
 
 const AppRoutes = () => {
   return (
