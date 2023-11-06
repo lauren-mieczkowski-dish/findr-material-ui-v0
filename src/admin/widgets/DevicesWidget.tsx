@@ -10,7 +10,7 @@ import ListItemSecondaryAction from "@material-ui/core/ListItemSecondaryAction";
 import ListItemText from "@material-ui/core/ListItemText";
 import { useTheme } from "@material-ui/core/styles";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
-import PersonIcon from "@material-ui/icons/Person";
+import DevicesOther from "@material-ui/icons/DevicesOther";
 import { useTranslation } from "react-i18next";
 import { Link as RouterLink } from "react-router-dom";
 
@@ -51,7 +51,7 @@ const DevicesWidget = () => {
             <ListItem disableGutters key={device.id}>
               <ListItemAvatar>
                 <Avatar>
-                  <PersonIcon />
+                  <DevicesOther />
                 </Avatar>
               </ListItemAvatar>
               <ListItemText

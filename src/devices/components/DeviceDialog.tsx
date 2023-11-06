@@ -22,7 +22,7 @@ const upConnectors = [
   { label: "deviceManagement.form.upConnector.options.d", value: "Dynamo DB" },
   { label: "deviceManagement.form.upConnector.options.b", value: "Blob Store" },
 ];
-const deviceTypes = ["Admin", "Member"];
+const deviceTypes = ["Sensor", "Camera"];
 
 type DeviceDialogProps = {
   onAdd: (device: Partial<Device>) => void;

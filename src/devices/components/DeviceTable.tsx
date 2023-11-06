@@ -17,7 +17,7 @@ import Typography from "@material-ui/core/Typography";
 import DeleteIcon from "@material-ui/icons/Delete";
 import EditIcon from "@material-ui/icons/Edit";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
-import PersonIcon from "@material-ui/icons/Person";
+import DevicesOther from "@material-ui/icons/DevicesOther";
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import Empty from "../../core/components/Empty";
@@ -160,7 +160,7 @@ const DeviceRow = ({
       <TableCell>
         <Box sx={{ display: "flex", alignItems: "center" }}>
           <Avatar sx={{ mr: 3 }}>
-            <PersonIcon />
+            <DevicesOther />
           </Avatar>
           <Box>
             <Typography component="div" variant="h6">

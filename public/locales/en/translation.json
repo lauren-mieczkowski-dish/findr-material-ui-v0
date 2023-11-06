@@ -408,8 +408,8 @@
       "disabled": {
         "label": "Disabled"
       },
-      "email": {
-        "label": "Email Address"
+      "macAddress": {
+        "label": "Mac Address"
       },
       "firstName": {
         "label": "First Name"
