@@ -10,7 +10,7 @@ import BarChartIcon from "@material-ui/icons/BarChart";
 import EventIcon from "@material-ui/icons/Event";
 import HelpCenterIcon from "@material-ui/icons/HelpCenter";
 import HomeIcon from "@material-ui/icons/Home";
-import PeopleIcon from "@material-ui/icons/People";
+import LinkIcon from "@material-ui/icons/Link";
 import PersonIcon from "@material-ui/icons/Person";
 import SettingsIcon from "@material-ui/icons/Settings";
 import { useTranslation } from "react-i18next";
@@ -38,7 +38,7 @@ export const menuItems = [
     path: "/admin/dashboard",
   },
   {
-    icon: PeopleIcon,
+    icon: LinkIcon,
     key: "admin.drawer.menu.userManagement",
     path: "/admin/user-management",
   },
