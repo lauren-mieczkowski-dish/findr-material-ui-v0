@@ -34,22 +34,22 @@ const headCells: HeadCell[] = [
   {
     id: "user",
     align: "left",
-    label: "userManagement.table.headers.user",
+    label: "deviceManagement.table.headers.user",
   },
   {
     id: "gender",
     align: "center",
-    label: "userManagement.table.headers.gender",
+    label: "deviceManagement.table.headers.gender",
   },
   {
     id: "role",
     align: "center",
-    label: "userManagement.table.headers.role",
+    label: "deviceManagement.table.headers.role",
   },
   {
     id: "status",
     align: "center",
-    label: "userManagement.table.headers.status",
+    label: "deviceManagement.table.headers.status",
   },
 ];
 
@@ -86,7 +86,7 @@ function EnhancedTableHead({
           </TableCell>
         ))}
         <TableCell align="right" sx={{ py: 0 }}>
-          {t("userManagement.table.headers.actions")}
+          {t("deviceManagement.table.headers.actions")}
         </TableCell>
       </TableRow>
     </TableHead>

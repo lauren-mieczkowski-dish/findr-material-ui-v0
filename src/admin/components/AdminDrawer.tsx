@@ -44,8 +44,8 @@ export const menuItems = [
   },
   {
     icon: AccountTreeIcon,
-    key: "admin.drawer.menu.userManagement",
-    path: "/admin/user-management",
+    key: "admin.drawer.menu.deviceManagement",
+    path: "/admin/device-management",
   },
   {
     icon: HelpCenterIcon,

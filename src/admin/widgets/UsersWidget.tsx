@@ -66,7 +66,7 @@ const UsersWidget = () => {
                   aria-label="Go to user details"
                   component={RouterLink}
                   edge="end"
-                  to={`/${process.env.PUBLIC_URL}/admin/user-management`}
+                  to={`/${process.env.PUBLIC_URL}/admin/device-management`}
                 >
                   <ChevronRightIcon />
                 </IconButton>

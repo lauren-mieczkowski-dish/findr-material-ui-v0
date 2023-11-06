@@ -15,7 +15,7 @@ import { useUpdateUser } from "../hooks/useUpdateUser";
 import { useUsers } from "../hooks/useUsers";
 import { User } from "../types/user";
 
-const UserManagement = () => {
+const DeviceManagement = () => {
   const snackbar = useSnackbar();
   const { t } = useTranslation();
 
@@ -36,7 +36,7 @@ const UserManagement = () => {
     addUser(user as User)
       .then(() => {
         snackbar.success(
-          t("userManagement.notifications.addSuccess", {
+          t("DeviceManagement.notifications.addSuccess", {
             user: `${user.firstName} ${user.lastName}`,
           })
         );
@@ -50,7 +50,7 @@ const UserManagement = () => {
   const handleDeleteUsers = async () => {
     deleteUsers(userDeleted)
       .then(() => {
-        snackbar.success(t("userManagement.notifications.deleteSuccess"));
+        snackbar.success(t("DeviceManagement.notifications.deleteSuccess"));
         setSelected([]);
         setUserDeleted([]);
         setOpenConfirmDeleteDialog(false);
@@ -64,7 +64,7 @@ const UserManagement = () => {
     updateUser(user)
       .then(() => {
         snackbar.success(
-          t("userManagement.notifications.updateSuccess", {
+          t("DeviceManagement.notifications.updateSuccess", {
             user: `${user.firstName} ${user.lastName}`,
           })
         );
@@ -106,7 +106,7 @@ const UserManagement = () => {
     <React.Fragment>
       <AdminAppBar>
         {!selected.length ? (
-          <AdminToolbar title={t("userManagement.toolbar.title")}>
+          <AdminToolbar title={t("DeviceManagement.toolbar.title")}>
             <Fab
               aria-label="logout"
               color="primary"
@@ -135,7 +135,7 @@ const UserManagement = () => {
         users={data}
       />
       <ConfirmDialog
-        description={t("userManagement.confirmations.delete")}
+        description={t("DeviceManagement.confirmations.delete")}
         pending={processing}
         onClose={handleCloseConfirmDeleteDialog}
         onConfirm={handleDeleteUsers}
@@ -156,4 +156,4 @@ const UserManagement = () => {
   );
 };
 
-export default UserManagement;
+export default DeviceManagement;

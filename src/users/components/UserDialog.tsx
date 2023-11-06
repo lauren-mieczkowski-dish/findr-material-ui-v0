@@ -18,9 +18,9 @@ import * as Yup from "yup";
 import { User } from "../types/user";
 
 const genders = [
-  { label: "userManagement.form.gender.options.f", value: "F" },
-  { label: "userManagement.form.gender.options.m", value: "M" },
-  { label: "userManagement.form.gender.options.n", value: "NC" },
+  { label: "deviceManagement.form.gender.options.f", value: "F" },
+  { label: "deviceManagement.form.gender.options.m", value: "M" },
+  { label: "deviceManagement.form.gender.options.n", value: "NC" },
 ];
 const roles = ["Admin", "Member"];
 
@@ -82,8 +82,8 @@ const UserDialog = ({
       <form onSubmit={formik.handleSubmit} noValidate>
         <DialogTitle id="user-dialog-title">
           {editMode
-            ? t("userManagement.modal.edit.title")
-            : t("userManagement.modal.add.title")}
+            ? t("deviceManagement.modal.edit.title")
+            : t("deviceManagement.modal.add.title")}
         </DialogTitle>
         <DialogContent>
           <TextField
@@ -91,7 +91,7 @@ const UserDialog = ({
             required
             fullWidth
             id="lastName"
-            label={t("userManagement.form.lastName.label")}
+            label={t("deviceManagement.form.lastName.label")}
             name="lastName"
             autoComplete="family-name"
             autoFocus
@@ -106,7 +106,7 @@ const UserDialog = ({
             required
             fullWidth
             id="firstName"
-            label={t("userManagement.form.firstName.label")}
+            label={t("deviceManagement.form.firstName.label")}
             name="firstName"
             autoComplete="given-name"
             disabled={processing}
@@ -117,7 +117,7 @@ const UserDialog = ({
           />
           <FormControl component="fieldset" margin="normal">
             <FormLabel component="legend">
-              {t("userManagement.form.gender.label")}
+              {t("deviceManagement.form.gender.label")}
             </FormLabel>
             <RadioGroup
               row
@@ -142,7 +142,7 @@ const UserDialog = ({
             required
             fullWidth
             id="email"
-            label={t("userManagement.form.email.label")}
+            label={t("deviceManagement.form.email.label")}
             name="email"
             autoComplete="email"
             disabled={processing}
@@ -158,7 +158,7 @@ const UserDialog = ({
             disabled={processing}
             fullWidth
             select
-            label={t("userManagement.form.role.label")}
+            label={t("deviceManagement.form.role.label")}
             name="role"
             value={formik.values.role}
             onChange={formik.handleChange}
@@ -178,7 +178,7 @@ const UserDialog = ({
               onChange={formik.handleChange}
               checked={formik.values.disabled}
               control={<Checkbox />}
-              label={t("userManagement.form.disabled.label")}
+              label={t("deviceManagement.form.disabled.label")}
             />
           </FormControl>
         </DialogContent>
@@ -186,8 +186,8 @@ const UserDialog = ({
           <Button onClick={onClose}>{t("common.cancel")}</Button>
           <LoadingButton loading={processing} type="submit" variant="contained">
             {editMode
-              ? t("userManagement.modal.edit.action")
-              : t("userManagement.modal.add.action")}
+              ? t("deviceManagement.modal.edit.action")
+              : t("deviceManagement.modal.add.action")}
           </LoadingButton>
         </DialogActions>
       </form>
