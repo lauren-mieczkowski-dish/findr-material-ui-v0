@@ -37,9 +37,9 @@ const headCells: HeadCell[] = [
     label: "deviceManagement.table.headers.device",
   },
   {
-    id: "gender",
+    id: "upConnector",
     align: "center",
-    label: "deviceManagement.table.headers.gender",
+    label: "deviceManagement.table.headers.upConnector",
   },
   {
     id: "role",
@@ -172,7 +172,7 @@ const DeviceRow = ({
           </Box>
         </Box>
       </TableCell>
-      <TableCell align="center">{device.gender}</TableCell>
+      <TableCell align="center">{device.upConnector}</TableCell>
       <TableCell align="center">{device.role}</TableCell>
       <TableCell align="center">
         {device.disabled ? (

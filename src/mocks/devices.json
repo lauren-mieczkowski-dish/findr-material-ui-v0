@@ -5,7 +5,7 @@
     "disabled": false,
     "macAddress": "5A-C1-3F-95-75-BE",
     "firstName": "Rhys",
-    "gender": "M",
+    "upConnector": "S3",
     "lastName": "Arriaga",
     "role": "Admin"
   },
@@ -15,7 +15,7 @@
     "disabled": false,
     "macAddress": "52-B5-B4-C6-F5-81",
     "firstName": "Laura",
-    "gender": "F",
+    "upConnector": "Blob Store",
     "lastName": "Core",
     "role": "Member"
   },
@@ -25,7 +25,7 @@
     "disabled": false,
     "macAddress": "B4-3B-27-66-32-0B",
     "firstName": "Joshua",
-    "gender": "M",
+    "upConnector": "S3",
     "lastName": "Jagger",
     "role": "Member"
   },
@@ -35,7 +35,7 @@
     "disabled": true,
     "macAddress": "5B-01-6B-62-8E-52",
     "firstName": "Jason",
-    "gender": "M",
+    "upConnector": "S3",
     "lastName": "Jimenez",
     "role": "Member"
   },
@@ -45,7 +45,7 @@
     "disabled": true,
     "macAddress": "57-CF-2D-0C-73-97",
     "firstName": "Rhonda",
-    "gender": "F",
+    "upConnector": "Dynamo DB",
     "lastName": "Mcguire",
     "role": "Member"
   },
@@ -55,7 +55,7 @@
     "disabled": false,
     "macAddress": "B1-07-BE-02-F5-2B",
     "firstName": "Aaron",
-    "gender": "M",
+    "upConnector": "S3",
     "lastName": "Moreno",
     "role": "Member"
   },
@@ -65,7 +65,7 @@
     "disabled": false,
     "macAddress": "9B-B3-4A-E0-8F-22",
     "firstName": "Carley",
-    "gender": "F",
+    "upConnector": "Dynamo DB",
     "lastName": "Murray",
     "role": "Member"
   },
@@ -75,7 +75,7 @@
     "disabled": false,
     "macAddress": "9D-8F-3C-53-1D-97",
     "firstName": "Cherise",
-    "gender": "F",
+    "upConnector": "Dynamo DB",
     "lastName": "Owen",
     "role": "Member"
   },
@@ -85,7 +85,7 @@
     "disabled": false,
     "macAddress": "BB-04-B3-4D-CC-A7",
     "firstName": "Nathan",
-    "gender": "M",
+    "upConnector": "S3",
     "lastName": "Romero",
     "role": "Member"
   },
@@ -95,7 +95,7 @@
     "disabled": false,
     "macAddress": "9E-E0-D8-5A-9F-D8",
     "firstName": "Olivia",
-    "gender": "F",
+    "upConnector": "Dynamo DB",
     "lastName": "Spence",
     "role": "Member"
   },
@@ -105,7 +105,7 @@
     "disabled": false,
     "macAddress": "5D-3D-30-93-2B-F0",
     "firstName": "Elisha",
-    "gender": "F",
+    "upConnector": "Dynamo DB",
     "lastName": "Wade",
     "role": "Member"
   }

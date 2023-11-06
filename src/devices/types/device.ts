@@ -4,7 +4,7 @@ export interface Device {
   disabled: boolean;
   macAddress: string;
   firstName: string;
-  gender?: "F" | "M" | "NC";
+  upConnector?: "S3" | "DynamoDB" | "Blob Store";
   lastName: string;
   role: string;
 }

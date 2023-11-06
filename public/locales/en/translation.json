@@ -414,12 +414,12 @@
       "firstName": {
         "label": "First Name"
       },
-      "gender": {
-        "label": "Gender",
+      "upConnector": {
+        "label": "Upstream Connector",
         "options": {
-          "f": "Female",
-          "m": "Male",
-          "n": "NC"
+          "s": "S3",
+          "d": "Dynamo DB",
+          "b": "Blob Store"
         }
       },
       "lastName": {
@@ -447,7 +447,7 @@
     "table": {
       "headers": {
         "actions": "Actions",
-        "gender": "Gender",
+        "upConnector": "Upstream Connector",
         "role": "Role",
         "status": "Status",
         "device": "Device"

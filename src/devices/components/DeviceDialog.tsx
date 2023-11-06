@@ -17,10 +17,10 @@ import { useTranslation } from "react-i18next";
 import * as Yup from "yup";
 import { Device } from "../types/device";
 
-const genders = [
-  { label: "deviceManagement.form.gender.options.f", value: "F" },
-  { label: "deviceManagement.form.gender.options.m", value: "M" },
-  { label: "deviceManagement.form.gender.options.n", value: "NC" },
+const upConnectors = [
+  { label: "deviceManagement.form.upConnector.options.s", value: "S3" },
+  { label: "deviceManagement.form.upConnector.options.d", value: "Dynamo DB" },
+  { label: "deviceManagement.form.upConnector.options.b", value: "Blob Store" },
 ];
 const roles = ["Admin", "Member"];
 
@@ -58,7 +58,7 @@ const DeviceDialog = ({
       disabled: device ? device.disabled : false,
       macAddress: device ? device.macAddress : "",
       firstName: device ? device.firstName : "",
-      gender: device ? device.gender : "F",
+      upConnector: device ? device.upConnector : "S3",
       lastName: device ? device.lastName : "",
       role: device ? device.role : "",
     },
@@ -117,22 +117,22 @@ const DeviceDialog = ({
           />
           <FormControl component="fieldset" margin="normal">
             <FormLabel component="legend">
-              {t("deviceManagement.form.gender.label")}
+              {t("deviceManagement.form.upConnector.label")}
             </FormLabel>
             <RadioGroup
               row
-              aria-label="gender"
-              name="gender"
-              value={formik.values.gender}
+              aria-label="upConnector"
+              name="upConnector"
+              value={formik.values.upConnector}
               onChange={formik.handleChange}
             >
-              {genders.map((gender) => (
+              {upConnectors.map((upConnector) => (
                 <FormControlLabel
-                  key={gender.value}
+                  key={upConnector.value}
                   disabled={processing}
-                  value={gender.value}
+                  value={upConnector.value}
                   control={<Radio />}
-                  label={t(gender.label)}
+                  label={t(upConnector.label)}
                 />
               ))}
             </RadioGroup>
