@@ -43,11 +43,6 @@ export const menuItems = [
     path: "/admin/user-management",
   },
   {
-    icon: EventIcon,
-    key: "admin.drawer.menu.calendar",
-    path: "/admin/calendar",
-  },
-  {
     icon: AccountTreeIcon,
     key: "admin.drawer.menu.projects",
     path: "/admin/projects",
