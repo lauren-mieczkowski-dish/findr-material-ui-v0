@@ -20,21 +20,21 @@ const devices = [
     firstName: "Rhys",
     upConnector: "S3",
     lastName: "Arriaga",
-    deviceType: "Admin",
+    deviceType: "Sensor",
   },
   {
     id: "2",
     firstName: "Laura",
     upConnector: "Dynamo DB",
     lastName: "Core",
-    deviceType: "Member",
+    deviceType: "Camera",
   },
   {
     id: "3",
     firstName: "Joshua",
     upConnector: "Blob Store",
     lastName: "Jagger",
-    deviceType: "Member",
+    deviceType: "Camera",
   },
 ];
 
