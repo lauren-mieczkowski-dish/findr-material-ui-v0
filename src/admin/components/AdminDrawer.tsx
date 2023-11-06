@@ -39,13 +39,13 @@ export const menuItems = [
   },
   {
     icon: LinkIcon,
-    key: "admin.drawer.menu.userManagement",
-    path: "/admin/user-management",
+    key: "admin.drawer.menu.projects",
+    path: "/admin/projects",
   },
   {
     icon: AccountTreeIcon,
-    key: "admin.drawer.menu.projects",
-    path: "/admin/projects",
+    key: "admin.drawer.menu.userManagement",
+    path: "/admin/user-management",
   },
   {
     icon: HelpCenterIcon,
