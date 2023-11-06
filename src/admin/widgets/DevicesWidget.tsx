@@ -14,7 +14,7 @@ import PersonIcon from "@material-ui/icons/Person";
 import { useTranslation } from "react-i18next";
 import { Link as RouterLink } from "react-router-dom";
 
-const users = [
+const devices = [
   {
     id: "1",
     firstName: "Rhys",
@@ -38,32 +38,32 @@ const users = [
   },
 ];
 
-const UsersWidget = () => {
+const DevicesWidget = () => {
   const theme = useTheme();
   const { t } = useTranslation();
 
   return (
     <Card>
-      <CardHeader title={t("dashboard.users.title")} />
+      <CardHeader title={t("dashboard.devices.title")} />
       <CardContent>
         <List>
-          {users.map((user) => (
-            <ListItem disableGutters key={user.id}>
+          {devices.map((device) => (
+            <ListItem disableGutters key={device.id}>
               <ListItemAvatar>
                 <Avatar>
                   <PersonIcon />
                 </Avatar>
               </ListItemAvatar>
               <ListItemText
-                primary={`${user.lastName} ${user.firstName}`}
+                primary={`${device.lastName} ${device.firstName}`}
                 primaryTypographyProps={{
                   fontWeight: theme.typography.fontWeightMedium,
                 }}
-                secondary={user.role}
+                secondary={device.role}
               />
               <ListItemSecondaryAction>
                 <IconButton
-                  aria-label="Go to user details"
+                  aria-label="Go to device details"
                   component={RouterLink}
                   edge="end"
                   to={`/${process.env.PUBLIC_URL}/admin/device-management`}
@@ -79,4 +79,4 @@ const UsersWidget = () => {
   );
 };
 
-export default UsersWidget;
+export default DevicesWidget;

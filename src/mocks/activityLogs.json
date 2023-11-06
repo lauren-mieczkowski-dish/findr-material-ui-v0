@@ -20,7 +20,7 @@
   {
     "id": "3",
     "actor": "Praveen Mada",
-    "code": "userDeleted",
+    "code": "deviceDeleted",
     "createdAt": 1617868226000,
     "params": {
       "resource": "Praveen Mada"
@@ -29,7 +29,7 @@
   {
     "id": "4",
     "actor": "Praveen Mada",
-    "code": "userUpdated",
+    "code": "deviceUpdated",
     "createdAt": 1617868226000,
     "params": {
       "resource": "Praveen Mada"
@@ -38,7 +38,7 @@
   {
     "id": "5",
     "actor": "Praveen Mada",
-    "code": "userAdded",
+    "code": "deviceAdded",
     "createdAt": 1617868226000,
     "params": {
       "resource": "Praveen Mada"

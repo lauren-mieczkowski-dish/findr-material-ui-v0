@@ -224,7 +224,7 @@
     "overview": {
       "orders": "Orders",
       "sales": "Sales",
-      "users": "Users",
+      "devices": "Devices",
       "visits": "Visits"
     },
     "progress": {
@@ -256,8 +256,8 @@
       },
       "title": "Teams Progress"
     },
-    "users": {
-      "title": "Recent Users"
+    "devices": {
+      "title": "Recent Devices"
     },
     "visitProgress": {
       "title": "Visits"
@@ -304,7 +304,7 @@
     "title": "Free and open-source admin application made with React and Material-UI"
   },
   "notifications": {
-    "newComment": "<bold>{{user}}</bold> has written a new comment on your profile",
+    "newComment": "<bold>{{device}}</bold> has written a new comment on your profile",
     "unreadMessages": "You have <bold>{{quantity}}</bold> unread messages"
   },
   "profile": {
@@ -313,9 +313,9 @@
       "logs": {
         "eventAdded": "<bold>You</bold> added a new event: <bold>{{resource}}</bold>",
         "eventUpdated": "<bold>You</bold> updated event: <bold>{{resource}}</bold>",
-        "userAdded": "<bold>You</bold> added a new user: <bold>{{resource}}</bold>",
-        "userDeleted": "<bold>You</bold> deleted user: <bold>{{resource}}</bold>",
-        "userUpdated": "<bold>You</bold> updated user: <bold>{{resource}}</bold>"
+        "deviceAdded": "<bold>You</bold> added a new device: <bold>{{resource}}</bold>",
+        "deviceDeleted": "<bold>You</bold> deleted device: <bold>{{resource}}</bold>",
+        "deviceUpdated": "<bold>You</bold> updated device: <bold>{{resource}}</bold>"
       }
     },
     "completion": {
@@ -402,7 +402,7 @@
   },
   "deviceManagement": {
     "confirmations": {
-      "delete": "Are you sure you want to delete this user?"
+      "delete": "Are you sure you want to delete this device?"
     },
     "form": {
       "disabled": {
@@ -432,17 +432,17 @@
     "modal": {
       "add": {
         "action": "Add",
-        "title": "Add User"
+        "title": "Add Device"
       },
       "edit": {
         "action": "Edit",
-        "title": "Edit User"
+        "title": "Edit Device"
       }
     },
     "notifications": {
-      "addSuccess": "{{user}} has been added!",
-      "deleteSuccess": "User(s) have been deleted!",
-      "updateSuccess": "{{user}} has been updated!"
+      "addSuccess": "{{device}} has been added!",
+      "deleteSuccess": "Device(s) have been deleted!",
+      "updateSuccess": "{{device}} has been updated!"
     },
     "table": {
       "headers": {
@@ -450,11 +450,11 @@
         "gender": "Gender",
         "role": "Role",
         "status": "Status",
-        "user": "User"
+        "device": "Device"
       }
     },
     "toolbar": {
-      "title": "Users"
+      "title": "Devices"
     }
   }
 }

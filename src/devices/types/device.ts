@@ -1,4 +1,4 @@
-export interface User {
+export interface Device {
   id: string;
   avatar?: string;
   disabled: boolean;

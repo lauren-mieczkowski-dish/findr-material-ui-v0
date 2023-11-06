@@ -15,7 +15,7 @@ import LoadingButton from "@material-ui/lab/LoadingButton";
 import { useFormik } from "formik";
 import { useTranslation } from "react-i18next";
 import * as Yup from "yup";
-import { User } from "../types/user";
+import { Device } from "../types/device";
 
 const genders = [
   { label: "deviceManagement.form.gender.options.f", value: "F" },
@@ -24,30 +24,30 @@ const genders = [
 ];
 const roles = ["Admin", "Member"];
 
-type UserDialogProps = {
-  onAdd: (user: Partial<User>) => void;
+type DeviceDialogProps = {
+  onAdd: (device: Partial<Device>) => void;
   onClose: () => void;
-  onUpdate: (user: User) => void;
+  onUpdate: (device: Device) => void;
   open: boolean;
   processing: boolean;
-  user?: User;
+  device?: Device;
 };
 
-const UserDialog = ({
+const DeviceDialog = ({
   onAdd,
   onClose,
   onUpdate,
   open,
   processing,
-  user,
-}: UserDialogProps) => {
+  device,
+}: DeviceDialogProps) => {
   const { t } = useTranslation();
 
-  const editMode = Boolean(user && user.id);
+  const editMode = Boolean(device && device.id);
 
-  const handleSubmit = (values: Partial<User>) => {
-    if (user && user.id) {
-      onUpdate({ ...values, id: user.id } as User);
+  const handleSubmit = (values: Partial<Device>) => {
+    if (device && device.id) {
+      onUpdate({ ...values, id: device.id } as Device);
     } else {
       onAdd(values);
     }
@@ -55,12 +55,12 @@ const UserDialog = ({
 
   const formik = useFormik({
     initialValues: {
-      disabled: user ? user.disabled : false,
-      email: user ? user.email : "",
-      firstName: user ? user.firstName : "",
-      gender: user ? user.gender : "F",
-      lastName: user ? user.lastName : "",
-      role: user ? user.role : "",
+      disabled: device ? device.disabled : false,
+      email: device ? device.email : "",
+      firstName: device ? device.firstName : "",
+      gender: device ? device.gender : "F",
+      lastName: device ? device.lastName : "",
+      role: device ? device.role : "",
     },
     validationSchema: Yup.object({
       email: Yup.string()
@@ -78,9 +78,9 @@ const UserDialog = ({
   });
 
   return (
-    <Dialog open={open} onClose={onClose} aria-labelledby="user-dialog-title">
+    <Dialog open={open} onClose={onClose} aria-labelledby="device-dialog-title">
       <form onSubmit={formik.handleSubmit} noValidate>
-        <DialogTitle id="user-dialog-title">
+        <DialogTitle id="device-dialog-title">
           {editMode
             ? t("deviceManagement.modal.edit.title")
             : t("deviceManagement.modal.add.title")}
@@ -195,4 +195,4 @@ const UserDialog = ({
   );
 };
 
-export default UserDialog;
+export default DeviceDialog;

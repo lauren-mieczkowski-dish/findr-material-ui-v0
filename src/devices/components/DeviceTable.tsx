@@ -22,7 +22,7 @@ import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import Empty from "../../core/components/Empty";
 import * as selectUtils from "../../core/utils/selectUtils";
-import { User } from "../types/user";
+import { Device } from "../types/device";
 
 interface HeadCell {
   id: string;
@@ -32,9 +32,9 @@ interface HeadCell {
 
 const headCells: HeadCell[] = [
   {
-    id: "user",
+    id: "device",
     align: "left",
-    label: "deviceManagement.table.headers.user",
+    label: "deviceManagement.table.headers.device",
   },
   {
     id: "gender",
@@ -76,7 +76,7 @@ function EnhancedTableHead({
             checked={rowCount > 0 && numSelected === rowCount}
             onChange={onSelectAllClick}
             inputProps={{
-              "aria-label": "select all users",
+              "aria-label": "select all devices",
             }}
           />
         </TableCell>
@@ -93,25 +93,25 @@ function EnhancedTableHead({
   );
 }
 
-type UserRowProps = {
+type DeviceRowProps = {
   index: number;
   onCheck: (id: string) => void;
-  onDelete: (userIds: string[]) => void;
-  onEdit: (user: User) => void;
+  onDelete: (deviceIds: string[]) => void;
+  onEdit: (device: Device) => void;
   processing: boolean;
   selected: boolean;
-  user: User;
+  device: Device;
 };
 
-const UserRow = ({
+const DeviceRow = ({
   index,
   onCheck,
   onDelete,
   onEdit,
   processing,
   selected,
-  user,
-}: UserRowProps) => {
+  device,
+}: DeviceRowProps) => {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const { t } = useTranslation();
 
@@ -128,19 +128,19 @@ const UserRow = ({
 
   const handleDelete = () => {
     handleCloseActions();
-    onDelete([user.id]);
+    onDelete([device.id]);
   };
 
   const handleEdit = () => {
     handleCloseActions();
-    onEdit(user);
+    onEdit(device);
   };
 
   return (
     <TableRow
       aria-checked={selected}
       tabIndex={-1}
-      key={user.id}
+      key={device.id}
       selected={selected}
       sx={{ "& td": { bgcolor: "background.paper", border: 0 } }}
     >
@@ -154,7 +154,7 @@ const UserRow = ({
           inputProps={{
             "aria-labelledby": labelId,
           }}
-          onClick={() => onCheck(user.id)}
+          onClick={() => onCheck(device.id)}
         />
       </TableCell>
       <TableCell>
@@ -164,18 +164,18 @@ const UserRow = ({
           </Avatar>
           <Box>
             <Typography component="div" variant="h6">
-              {`${user.lastName} ${user.firstName}`}
+              {`${device.lastName} ${device.firstName}`}
             </Typography>
             <Typography color="textSecondary" variant="body2">
-              {user.email}
+              {device.email}
             </Typography>
           </Box>
         </Box>
       </TableCell>
-      <TableCell align="center">{user.gender}</TableCell>
-      <TableCell align="center">{user.role}</TableCell>
+      <TableCell align="center">{device.gender}</TableCell>
+      <TableCell align="center">{device.role}</TableCell>
       <TableCell align="center">
-        {user.disabled ? (
+        {device.disabled ? (
           <Chip label="Disabled" />
         ) : (
           <Chip color="primary" label="Active" />
@@ -186,9 +186,9 @@ const UserRow = ({
         sx={{ borderTopRightRadius: "1rem", borderBottomRightRadius: "1rem" }}
       >
         <IconButton
-          id="user-row-menu-button"
-          aria-label="user actions"
-          aria-controls="user-row-menu"
+          id="device-row-menu-button"
+          aria-label="device actions"
+          aria-controls="device-row-menu"
           aria-haspopup="true"
           aria-expanded={openActions ? "true" : "false"}
           disabled={processing}
@@ -197,9 +197,9 @@ const UserRow = ({
           <MoreVertIcon />
         </IconButton>
         <Menu
-          id="user-row-menu"
+          id="device-row-menu"
           anchorEl={anchorEl}
-          aria-labelledby="user-row-menu-button"
+          aria-labelledby="device-row-menu-button"
           open={openActions}
           onClose={handleCloseActions}
           anchorOrigin={{
@@ -229,29 +229,29 @@ const UserRow = ({
   );
 };
 
-type UserTableProps = {
+type DeviceTableProps = {
   processing: boolean;
-  onDelete: (userIds: string[]) => void;
-  onEdit: (user: User) => void;
+  onDelete: (deviceIds: string[]) => void;
+  onEdit: (device: Device) => void;
   onSelectedChange: (selected: string[]) => void;
   selected: string[];
-  users?: User[];
+  devices?: Device[];
 };
 
-const UserTable = ({
+const DeviceTable = ({
   onDelete,
   onEdit,
   onSelectedChange,
   processing,
   selected,
-  users = [],
-}: UserTableProps) => {
+  devices = [],
+}: DeviceTableProps) => {
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(5);
 
   const handleSelectAllClick = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (event.target.checked) {
-      const newSelecteds = selectUtils.selectAll(users);
+      const newSelecteds = selectUtils.selectAll(devices);
       onSelectedChange(newSelecteds);
       return;
     }
@@ -276,8 +276,8 @@ const UserTable = ({
 
   const isSelected = (id: string) => selected.indexOf(id) !== -1;
 
-  if (users.length === 0) {
-    return <Empty title="No user yet" />;
+  if (devices.length === 0) {
+    return <Empty title="No device yet" />;
   }
 
   return (
@@ -294,21 +294,21 @@ const UserTable = ({
           <EnhancedTableHead
             numSelected={selected.length}
             onSelectAllClick={handleSelectAllClick}
-            rowCount={users.length}
+            rowCount={devices.length}
           />
           <TableBody>
-            {users
+            {devices
               .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-              .map((user, index) => (
-                <UserRow
+              .map((device, index) => (
+                <DeviceRow
                   index={index}
-                  key={user.id}
+                  key={device.id}
                   onCheck={handleClick}
                   onDelete={onDelete}
                   onEdit={onEdit}
                   processing={processing}
-                  selected={isSelected(user.id)}
-                  user={user}
+                  selected={isSelected(device.id)}
+                  device={device}
                 />
               ))}
           </TableBody>
@@ -317,7 +317,7 @@ const UserTable = ({
       <TablePagination
         rowsPerPageOptions={[5, 10, 25]}
         component="div"
-        count={users.length}
+        count={devices.length}
         rowsPerPage={rowsPerPage}
         page={page}
         onPageChange={handleChangePage}
@@ -327,4 +327,4 @@ const UserTable = ({
   );
 };
 
-export default UserTable;
+export default DeviceTable;
