@@ -425,7 +425,7 @@
       "lastName": {
         "label": "Nom"
       },
-      "role": {
+      "deviceType": {
         "label": "Rôle"
       }
     },
@@ -448,7 +448,7 @@
       "headers": {
         "actions": "Actions",
         "gender": "Genre",
-        "role": "Rôle",
+        "deviceType": "Rôle",
         "status": "Statut",
         "device": "Utilisateur"
       }

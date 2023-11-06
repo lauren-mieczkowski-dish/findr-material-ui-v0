@@ -179,7 +179,7 @@
         "subTitle": "You don't have access to view this page"
       },
       "notFound": {
-        "subTitle": "Sorry, we couldn’t find the page you’re looking for. Perhaps you’ve mistyped the URL? Be sure to check your spelling.",
+        "subTitle": "Sorry, we couldn’t find the page you’re looking for. Perhaps you’ve misdeviceTyped the URL? Be sure to check your spelling.",
         "title": "Oops!"
       },
       "unexpected": {
@@ -415,7 +415,7 @@
         "label": "First Name"
       },
       "upConnector": {
-        "label": "Upstream Connector",
+        "label": "Destination",
         "options": {
           "s": "S3",
           "d": "Dynamo DB",
@@ -425,8 +425,8 @@
       "lastName": {
         "label": "Last Name"
       },
-      "role": {
-        "label": "Role"
+      "deviceType": {
+        "label": "Type"
       }
     },
     "modal": {
@@ -447,8 +447,8 @@
     "table": {
       "headers": {
         "actions": "Actions",
-        "upConnector": "Upstream Connector",
-        "role": "Role",
+        "upConnector": "Destination",
+        "deviceType": "Type",
         "status": "Status",
         "device": "Device"
       }

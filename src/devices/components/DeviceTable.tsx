@@ -42,9 +42,9 @@ const headCells: HeadCell[] = [
     label: "deviceManagement.table.headers.upConnector",
   },
   {
-    id: "role",
+    id: "deviceType",
     align: "center",
-    label: "deviceManagement.table.headers.role",
+    label: "deviceManagement.table.headers.deviceType",
   },
   {
     id: "status",
@@ -173,7 +173,7 @@ const DeviceRow = ({
         </Box>
       </TableCell>
       <TableCell align="center">{device.upConnector}</TableCell>
-      <TableCell align="center">{device.role}</TableCell>
+      <TableCell align="center">{device.deviceType}</TableCell>
       <TableCell align="center">
         {device.disabled ? (
           <Chip label="Disabled" />

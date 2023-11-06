@@ -22,7 +22,7 @@ const upConnectors = [
   { label: "deviceManagement.form.upConnector.options.d", value: "Dynamo DB" },
   { label: "deviceManagement.form.upConnector.options.b", value: "Blob Store" },
 ];
-const roles = ["Admin", "Member"];
+const deviceTypes = ["Admin", "Member"];
 
 type DeviceDialogProps = {
   onAdd: (device: Partial<Device>) => void;
@@ -60,7 +60,7 @@ const DeviceDialog = ({
       firstName: device ? device.firstName : "",
       upConnector: device ? device.upConnector : "S3",
       lastName: device ? device.lastName : "",
-      role: device ? device.role : "",
+      deviceType: device ? device.deviceType : "",
     },
     validationSchema: Yup.object({
       macAddress: Yup.string()
@@ -72,7 +72,7 @@ const DeviceDialog = ({
       lastName: Yup.string()
         .max(30, t("common.validations.max", { size: 30 }))
         .required(t("common.validations.required")),
-      role: Yup.string().required(t("common.validations.required")),
+      deviceType: Yup.string().required(t("common.validations.required")),
     }),
     onSubmit: handleSubmit,
   });
@@ -154,20 +154,20 @@ const DeviceDialog = ({
           <TextField
             margin="normal"
             required
-            id="role"
+            id="deviceType"
             disabled={processing}
             fullWidth
             select
-            label={t("deviceManagement.form.role.label")}
-            name="role"
-            value={formik.values.role}
+            label={t("deviceManagement.form.deviceType.label")}
+            name="deviceType"
+            value={formik.values.deviceType}
             onChange={formik.handleChange}
-            error={formik.touched.role && Boolean(formik.errors.role)}
-            helperText={formik.touched.role && formik.errors.role}
+            error={formik.touched.deviceType && Boolean(formik.errors.deviceType)}
+            helperText={formik.touched.deviceType && formik.errors.deviceType}
           >
-            {roles.map((role) => (
-              <MenuItem key={role} value={role}>
-                {role}
+            {deviceTypes.map((deviceType) => (
+              <MenuItem key={deviceType} value={deviceType}>
+                {deviceType}
               </MenuItem>
             ))}
           </TextField>

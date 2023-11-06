@@ -6,5 +6,5 @@ export interface Device {
   firstName: string;
   upConnector?: "S3" | "DynamoDB" | "Blob Store";
   lastName: string;
-  role: string;
+  deviceType: string;
 }

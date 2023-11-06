@@ -20,21 +20,21 @@ const devices = [
     firstName: "Rhys",
     upConnector: "S3",
     lastName: "Arriaga",
-    role: "Admin",
+    deviceType: "Admin",
   },
   {
     id: "2",
     firstName: "Laura",
     upConnector: "Dynamo DB",
     lastName: "Core",
-    role: "Member",
+    deviceType: "Member",
   },
   {
     id: "3",
     firstName: "Joshua",
     upConnector: "Blob Store",
     lastName: "Jagger",
-    role: "Member",
+    deviceType: "Member",
   },
 ];
 
@@ -59,7 +59,7 @@ const DevicesWidget = () => {
                 primaryTypographyProps={{
                   fontWeight: theme.typography.fontWeightMedium,
                 }}
-                secondary={device.role}
+                secondary={device.deviceType}
               />
               <ListItemSecondaryAction>
                 <IconButton

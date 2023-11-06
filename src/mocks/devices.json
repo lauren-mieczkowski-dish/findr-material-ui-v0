@@ -7,7 +7,7 @@
     "firstName": "Rhys",
     "upConnector": "S3",
     "lastName": "Arriaga",
-    "role": "Admin"
+    "deviceType": "Admin"
   },
   {
     "id": "2",
@@ -17,7 +17,7 @@
     "firstName": "Laura",
     "upConnector": "Blob Store",
     "lastName": "Core",
-    "role": "Member"
+    "deviceType": "Member"
   },
   {
     "id": "3",
@@ -27,7 +27,7 @@
     "firstName": "Joshua",
     "upConnector": "S3",
     "lastName": "Jagger",
-    "role": "Member"
+    "deviceType": "Member"
   },
   {
     "id": "4",
@@ -37,7 +37,7 @@
     "firstName": "Jason",
     "upConnector": "S3",
     "lastName": "Jimenez",
-    "role": "Member"
+    "deviceType": "Member"
   },
   {
     "id": "5",
@@ -47,7 +47,7 @@
     "firstName": "Rhonda",
     "upConnector": "Dynamo DB",
     "lastName": "Mcguire",
-    "role": "Member"
+    "deviceType": "Member"
   },
   {
     "id": "6",
@@ -57,7 +57,7 @@
     "firstName": "Aaron",
     "upConnector": "S3",
     "lastName": "Moreno",
-    "role": "Member"
+    "deviceType": "Member"
   },
   {
     "id": "7",
@@ -67,7 +67,7 @@
     "firstName": "Carley",
     "upConnector": "Dynamo DB",
     "lastName": "Murray",
-    "role": "Member"
+    "deviceType": "Member"
   },
   {
     "id": "8",
@@ -77,7 +77,7 @@
     "firstName": "Cherise",
     "upConnector": "Dynamo DB",
     "lastName": "Owen",
-    "role": "Member"
+    "deviceType": "Member"
   },
   {
     "id": "9",
@@ -87,7 +87,7 @@
     "firstName": "Nathan",
     "upConnector": "S3",
     "lastName": "Romero",
-    "role": "Member"
+    "deviceType": "Member"
   },
   {
     "id": "10",
@@ -97,7 +97,7 @@
     "firstName": "Olivia",
     "upConnector": "Dynamo DB",
     "lastName": "Spence",
-    "role": "Member"
+    "deviceType": "Member"
   },
   {
     "id": "11",
@@ -107,6 +107,6 @@
     "firstName": "Elisha",
     "upConnector": "Dynamo DB",
     "lastName": "Wade",
-    "role": "Member"
+    "deviceType": "Member"
   }
 ]
