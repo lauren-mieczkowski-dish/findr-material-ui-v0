@@ -106,7 +106,7 @@ const DeviceManagement = () => {
     <React.Fragment>
       <AdminAppBar>
         {!selected.length ? (
-          <AdminToolbar title={t("DeviceManagement.toolbar.title")}>
+          <AdminToolbar title={t("deviceManagement.toolbar.title")}>
             <Fab
               aria-label="logout"
               color="primary"
@@ -135,7 +135,7 @@ const DeviceManagement = () => {
         users={data}
       />
       <ConfirmDialog
-        description={t("DeviceManagement.confirmations.delete")}
+        description={t("deviceManagement.confirmations.delete")}
         pending={processing}
         onClose={handleCloseConfirmDeleteDialog}
         onConfirm={handleDeleteUsers}
