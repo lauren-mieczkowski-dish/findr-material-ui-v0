@@ -32,14 +32,13 @@ const Register = () => {
 
   const formik = useFormik({
     initialValues: {
-      email: "",
+      macAddress: "",
       firstName: "",
       gender: "F",
       lastName: "",
     },
     validationSchema: Yup.object({
-      email: Yup.string()
-        .email("Invalid email address")
+      macAddress: Yup.string()
         .required(t("common.validations.required")),
       firstName: Yup.string()
         .max(20, t("common.validations.max", { size: 20 }))
@@ -128,15 +127,15 @@ const Register = () => {
           margin="normal"
           required
           fullWidth
-          id="email"
-          label={t("auth.register.form.email.label")}
-          name="email"
-          autoComplete="email"
+          id="macAddress"
+          label={t("auth.register.form.macAddress.label")}
+          name="macAddress"
+          autoComplete="macAddress"
           disabled={isRegistering}
-          value={formik.values.email}
+          value={formik.values.macAddress}
           onChange={formik.handleChange}
-          error={formik.touched.email && Boolean(formik.errors.email)}
-          helperText={formik.touched.email && formik.errors.email}
+          error={formik.touched.macAddress && Boolean(formik.errors.macAddress)}
+          helperText={formik.touched.macAddress && formik.errors.macAddress}
         />
         <LoadingButton
           type="submit"

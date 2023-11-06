@@ -167,7 +167,7 @@ const DeviceRow = ({
               {`${device.lastName} ${device.firstName}`}
             </Typography>
             <Typography color="textSecondary" variant="body2">
-              {device.email}
+              {device.macAddress}
             </Typography>
           </Box>
         </Box>

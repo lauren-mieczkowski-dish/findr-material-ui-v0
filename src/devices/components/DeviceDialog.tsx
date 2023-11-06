@@ -56,15 +56,15 @@ const DeviceDialog = ({
   const formik = useFormik({
     initialValues: {
       disabled: device ? device.disabled : false,
-      email: device ? device.email : "",
+      macAddress: device ? device.macAddress : "",
       firstName: device ? device.firstName : "",
       gender: device ? device.gender : "F",
       lastName: device ? device.lastName : "",
       role: device ? device.role : "",
     },
     validationSchema: Yup.object({
-      email: Yup.string()
-        .email(t("common.validations.email"))
+      macAddress: Yup.string()
+        .macAddress(t("common.validations.macAddress"))
         .required(t("common.validations.required")),
       firstName: Yup.string()
         .max(20, t("common.validations.max", { size: 20 }))
@@ -141,15 +141,15 @@ const DeviceDialog = ({
             margin="normal"
             required
             fullWidth
-            id="email"
-            label={t("deviceManagement.form.email.label")}
-            name="email"
-            autoComplete="email"
+            id="macAddress"
+            label={t("deviceManagement.form.macAddress.label")}
+            name="macAddress"
+            autoComplete="macAddress"
             disabled={processing}
-            value={formik.values.email}
+            value={formik.values.macAddress}
             onChange={formik.handleChange}
-            error={formik.touched.email && Boolean(formik.errors.email)}
-            helperText={formik.touched.email && formik.errors.email}
+            error={formik.touched.macAddress && Boolean(formik.errors.macAddress)}
+            helperText={formik.touched.macAddress && formik.errors.macAddress}
           />
           <TextField
             margin="normal"
