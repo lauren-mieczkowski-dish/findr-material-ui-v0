@@ -10,7 +10,7 @@
   },
   {
     "id": "2",
-    "actor": "John Smith",
+    "actor": "Praveen Mada",
     "code": "eventUpdated",
     "createdAt": 1617868226000,
     "params": {
@@ -19,29 +19,29 @@
   },
   {
     "id": "3",
-    "actor": "John Smith",
+    "actor": "Praveen Mada",
     "code": "userDeleted",
     "createdAt": 1617868226000,
     "params": {
-      "resource": "John Smith"
+      "resource": "Praveen Mada"
     }
   },
   {
     "id": "4",
-    "actor": "John Smith",
+    "actor": "Praveen Mada",
     "code": "userUpdated",
     "createdAt": 1617868226000,
     "params": {
-      "resource": "John Smith"
+      "resource": "Praveen Mada"
     }
   },
   {
     "id": "5",
-    "actor": "John Smith",
+    "actor": "Praveen Mada",
     "code": "userAdded",
     "createdAt": 1617868226000,
     "params": {
-      "resource": "John Smith"
+      "resource": "Praveen Mada"
     }
   }
 ]
