@@ -45,7 +45,7 @@ const HelpCenter = () => {
               />
               <CardContent>
                 <Badge
-                  badgeContent="Coming soon"
+                  badgeContent="hi"
                   color="primary"
                   sx={{
                     "& .MuiBadge-badge": {

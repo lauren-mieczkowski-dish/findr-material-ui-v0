@@ -46,8 +46,8 @@
         "unit": "Views"
       },
       "welcome": {
-        "message": "This page is designed to give some important information about the application. Let's make someting together!",
-        "subTitle": "Welcome back!",
+        "message": "Connect and Manage your network of IoT Devices.",
+        "subTitle": "Welcome back to FINDR",
         "title": "Hi {{name}},"
       }
     }
@@ -267,7 +267,7 @@
   "faq": {
     "noAnswerLink": "Can't find it here? Check out our Help Center.",
     "questions": {
-      "title1": "What is React Admin?",
+      "title1": "What is FINDR?",
       "answer1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortiseget.",
       "title2": "How does it work?",
       "answer2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortiseget.",
