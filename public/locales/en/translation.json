@@ -216,7 +216,7 @@
       "legend": {
         "unit": "Budget ($K)"
       },
-      "title": "Budget"
+      "title": "Department"
     },
     "orderProgress": {
       "title": "Orders"
@@ -225,13 +225,13 @@
       "orders": "Orders",
       "sales": "Sales",
       "devices": "Devices",
-      "visits": "Visits"
+      "visits": "GB"
     },
     "progress": {
       "title": "Progress"
     },
     "salesByAge": {
-      "title": "Sales by Age"
+      "title": "Devices by Age"
     },
     "salesByCategory": {
       "legend": {

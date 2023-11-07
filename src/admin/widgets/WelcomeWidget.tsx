@@ -32,9 +32,9 @@ const WelcomeWidget = () => {
         >
           {t("admin.home.welcome.message")}
         </Typography>
-        <SvgContainer>
+        {/* <SvgContainer>
           <WelcomeSvg />
-        </SvgContainer>
+        </SvgContainer> */}
       </CardContent>
     </Card>
   );

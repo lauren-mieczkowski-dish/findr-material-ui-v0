@@ -1,5 +1,5 @@
 import Grid from "@material-ui/core/Grid";
-import Stack from '@mui/material/Stack';
+import Stack from "@material-ui/core/Stack";
 import React from "react";
 import AdminAppBar from "../components/AdminAppBar";
 import AdminToolbar from "../components/AdminToolbar";
@@ -21,7 +21,7 @@ const Home = () => {
         </AdminToolbar>
       </AdminAppBar>
       <Stack spacing={2}>
-        <Item> <WelcomeWidget /> </Item>
+        <WelcomeWidget />
       </Stack>
       {/* <Grid container spacing={2}>
         <Grid item xs={12} md={6} lg={4}>

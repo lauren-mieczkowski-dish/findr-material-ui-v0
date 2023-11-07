@@ -5,7 +5,7 @@ const Loader = () => {
   const theme = useTheme();
   return (
     <Logo
-      size={100}
+      size={400}
       sx={{
         "@keyframes pulse": {
           "0%": {
