@@ -10,9 +10,12 @@ import BarChartIcon from "@material-ui/icons/BarChart";
 import EventIcon from "@material-ui/icons/Event";
 import HelpCenterIcon from "@material-ui/icons/HelpCenter";
 import HomeIcon from "@material-ui/icons/Home";
-import LinkIcon from "@material-ui/icons/Link";
+import SensorIcon from "@material-ui/icons/Sensors";
 import PersonIcon from "@material-ui/icons/Person";
 import SettingsIcon from "@material-ui/icons/Settings";
+import LockIcon from "@material-ui/icons/Lock";
+import HubIcon from '@mui/icons-material/Hub';
+import VerifiedUserIcon from '@mui/icons-material/VerifiedUser';
 import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
 import { useAuth } from "../../auth/contexts/AuthProvider";
@@ -38,7 +41,7 @@ export const menuItems = [
     path: "/admin/dashboard",
   },
   {
-    icon: LinkIcon,
+    icon: SensorIcon,
     key: "admin.drawer.menu.projects",
     path: "/admin/projects",
   },
@@ -46,6 +49,21 @@ export const menuItems = [
     icon: AccountTreeIcon,
     key: "admin.drawer.menu.deviceManagement",
     path: "/admin/device-management",
+  },
+  {
+    icon: LockIcon,
+    key: "admin.drawer.menu.vault",
+    path: "/admin/vault",
+  },
+  {
+    icon: HubIcon,
+    key: "admin.drawer.menu.graphql",
+    path: "/admin/graphql",
+  },
+  {
+    icon: VerifiedUserIcon,
+    key: "admin.drawer.menu.harbor",
+    path: "/admin/harbor",
   },
   {
     icon: HelpCenterIcon,

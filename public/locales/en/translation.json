@@ -8,7 +8,10 @@
         "home": "Home",
         "projects": "Connect",
         "settings": "Settings",
-        "deviceManagement": "Manage"
+        "deviceManagement": "Manage",
+        "vault": "Vault",
+        "graphql": "Apollo",
+        "harbor": "Harbor"
       }
     },
     "header": {
