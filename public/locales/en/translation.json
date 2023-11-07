@@ -412,7 +412,7 @@
         "label": "Mac Address"
       },
       "firstName": {
-        "label": "First Name"
+        "label": "Name"
       },
       "upConnector": {
         "label": "Destination",
@@ -423,7 +423,7 @@
         }
       },
       "lastName": {
-        "label": "Last Name"
+        "label": "Template"
       },
       "deviceType": {
         "label": "Type"
