@@ -42,8 +42,8 @@ export const menuItems = [
   },
   {
     icon: SensorIcon,
-    key: "admin.drawer.menu.projects",
-    path: "/admin/projects",
+    key: "admin.drawer.menu.connect",
+    path: "/admin/connect",
   },
   {
     icon: AccountTreeIcon,

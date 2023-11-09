@@ -55,7 +55,34 @@ const AppRoutes = () => {
           <PrivateRoute path="password" element={<ProfilePassword />} />
         </PrivateRoute>
         <PrivateRoute
-          path="projects"
+          path="connect"
+          element={
+            <Navigate
+              to={`/${process.env.PUBLIC_URL}/under-construction`}
+              replace
+            />
+          }
+        />
+        <PrivateRoute
+          path="vault"
+          element={
+            <Navigate
+              to={`/${process.env.PUBLIC_URL}/under-construction`}
+              replace
+            />
+          }
+        />
+        <PrivateRoute
+          path="apollo"
+          element={
+            <Navigate
+              to={`/${process.env.PUBLIC_URL}/under-construction`}
+              replace
+            />
+          }
+        />
+        <PrivateRoute
+          path="harbor"
           element={
             <Navigate
               to={`/${process.env.PUBLIC_URL}/under-construction`}
