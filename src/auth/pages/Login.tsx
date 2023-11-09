@@ -45,21 +45,6 @@ const Login = () => {
   });
 
   return (
-    <Grid container component="main" sx={{ height: "100vh" }}>
-      <Grid
-        item
-        xs={false}
-        sm={4}
-        md={7}
-        sx={{
-          //backgroundImage: "url(./img/startup.svg)",
-          backgroundRepeat: "no-repeat",
-          bgcolor: "background.default",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      />
-      <Grid item xs={12} sm={8} md={5} component={Paper} square>
         <BoxedLayout>
           <Typography component="h1" variant="h5">
             {t("auth.login.title")}
@@ -131,8 +116,6 @@ const Login = () => {
             </Button>
           </Box>
         </BoxedLayout>
-      </Grid>
-    </Grid>
   );
 };
 
