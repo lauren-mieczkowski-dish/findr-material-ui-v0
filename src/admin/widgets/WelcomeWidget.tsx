@@ -18,7 +18,7 @@ const WelcomeWidget = () => {
         </Typography>
         <Typography
           component="div"
-          sx={{ fontWeight: 300, mb: 3 }}
+          sx={{ fontWeight: 300, mb: 4 }}
           variant="h1"
         >
           {t("admin.home.welcome.subTitle")}

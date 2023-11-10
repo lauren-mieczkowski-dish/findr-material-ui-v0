@@ -88,10 +88,10 @@
         "success": "Your password has been changed!"
       },
       "subTitle": "Enter the code you received by mail and choose a new password.",
-      "title": "Change your password"
+      "title": "Change Your Password"
     },
     "login": {
-      "forgotPasswordLink": "Forgot password?",
+      "forgotPasswordLink": "Forgot Password?",
       "form": {
         "email": {
           "label": "E-mail Address"
@@ -101,8 +101,8 @@
         }
       },
       "newAccountLink": "Don't have an account? Sign Up!",
-      "submit": "Sign in",
-      "title": "Sign in"
+      "submit": "Sign In",
+      "title": "SIGN IN"
     },
     "register": {
       "back": "Back to login",
@@ -113,12 +113,12 @@
         "firstName": {
           "label": "First Name"
         },
-        "gender": {
-          "label": "Gender",
+        "jobTitle": {
+          "label": "Job Title",
           "options": {
-            "f": "F",
-            "m": "M",
-            "n": "NC"
+            "e": "Engineer",
+            "d": "Developer",
+            "o": "Other"
           }
         },
         "lastName": {
@@ -296,7 +296,7 @@
   },
   "landing": {
     "cta": {
-      "main": "Sign in",
+      "main": "Sign In",
       "mainAuth": "Continue as {{name}}",
       "secondary": "Source code"
     },
@@ -332,19 +332,19 @@
         "firstName": {
           "label": "First Name"
         },
-        "gender": {
-          "label": "Gender",
+        "jobTitle": {
+          "label": "Job Title",
           "options": {
-            "f": "Female",
-            "m": "Male",
-            "n": "NC"
+            "e": "Engineer",
+            "d": "Developer",
+            "o": "Other"
           }
         },
         "lastName": {
           "label": "Last Name"
         }
       },
-      "title": "Update profile"
+      "title": "Update Profile"
     },
     "menu": {
       "activity": "Activity",
@@ -367,7 +367,7 @@
           "label": "New Password"
         }
       },
-      "title": "Change your password"
+      "title": "Change Your password"
     }
   },
   "settings": {

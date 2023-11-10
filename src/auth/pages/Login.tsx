@@ -46,7 +46,7 @@ const Login = () => {
 
   return (
         <BoxedLayout>
-          <Typography component="h1" variant="h5">
+          <Typography component="h1" variant="h3">
             {t("auth.login.title")}
           </Typography>
           <Box

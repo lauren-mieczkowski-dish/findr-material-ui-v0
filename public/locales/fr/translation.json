@@ -110,7 +110,7 @@
         "firstName": {
           "label": "Prénom"
         },
-        "gender": {
+        "jobTitle": {
           "label": "Genre",
           "options": {
             "f": "F",
@@ -329,7 +329,7 @@
         "firstName": {
           "label": "Prénom"
         },
-        "gender": {
+        "jobTitle": {
           "label": "Genre",
           "options": {
             "f": "Femme",
@@ -414,7 +414,7 @@
       "firstName": {
         "label": "Prénom"
       },
-      "gender": {
+      "jobTitle": {
         "label": "Genre",
         "options": {
           "f": "Femme",
@@ -447,7 +447,7 @@
     "table": {
       "headers": {
         "actions": "Actions",
-        "gender": "Genre",
+        "jobTitle": "Genre",
         "deviceType": "Rôle",
         "status": "Statut",
         "device": "Utilisateur"

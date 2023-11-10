@@ -1,20 +1,20 @@
 [
   {
     "id": "1",
-    "actor": "You",
-    "code": "eventAdded",
+    "actor": "Praveen Mada",
+    "code": "deviceDeleted",
     "createdAt": 1617868226000,
     "params": {
-      "resource": "React Summit"
+      "resource": "Sensor 123"
     }
   },
   {
     "id": "2",
     "actor": "Praveen Mada",
-    "code": "eventUpdated",
+    "code": "deviceUpdated",
     "createdAt": 1617868226000,
     "params": {
-      "resource": "React Summit"
+      "resource": "Sensor 456"
     }
   },
   {
@@ -23,7 +23,7 @@
     "code": "deviceDeleted",
     "createdAt": 1617868226000,
     "params": {
-      "resource": "Praveen Mada"
+      "resource": "Sensor 789"
     }
   },
   {
@@ -32,7 +32,7 @@
     "code": "deviceUpdated",
     "createdAt": 1617868226000,
     "params": {
-      "resource": "Praveen Mada"
+      "resource": "Camera 123"
     }
   },
   {
@@ -41,7 +41,7 @@
     "code": "deviceAdded",
     "createdAt": 1617868226000,
     "params": {
-      "resource": "Praveen Mada"
+      "resource": "Camera 456"
     }
   }
 ]
