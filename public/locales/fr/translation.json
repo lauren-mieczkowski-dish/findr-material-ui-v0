@@ -2,7 +2,6 @@
   "admin": {
     "drawer": {
       "menu": {
-        "calendar": "Calendrier",
         "dashboard": "Dashboard",
         "help": "Aide",
         "home": "Home",
@@ -128,44 +127,6 @@
       "submit": "S'enregistrer",
       "title": "S'enregistrer"
     }
-  },
-  "calendar": {
-    "confirmations": {
-      "delete": "Etes-vous certain de vouloir supprimer cet évènement?"
-    },
-    "form": {
-      "color": {
-        "label": "Couleur"
-      },
-      "description": {
-        "label": "Description"
-      },
-      "end": {
-        "label": "Date de fin"
-      },
-      "start": {
-        "label": "Date de début"
-      },
-      "title": {
-        "label": "Titre"
-      }
-    },
-    "modal": {
-      "add": {
-        "action": "Ajouter",
-        "title": "Ajouter un évènement"
-      },
-      "edit": {
-        "action": "Modifier",
-        "title": "Modifier l'évènement"
-      }
-    },
-    "notifications": {
-      "addSuccess": "{{event}} a été ajouté!",
-      "deleteSuccess": "L'évènement a été supprimé!",
-      "updateSuccess": "{{event}} a été modifié!"
-    },
-    "title": "Calendrier"
   },
   "common": {
     "backHome": "Retourner sur la page d'accueil",
