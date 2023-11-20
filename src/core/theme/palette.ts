@@ -26,7 +26,7 @@ export const darkPalette = {
     main: "#4FC3F7",
   },
   primary: {
-    main: "#9d2235",
+    main: "#e3e3ec",
     contrastText: palette.grey[900],
   },
   secondary: {
