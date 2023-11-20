@@ -84,10 +84,6 @@ const DeviceDialog = ({
     onSubmit: handleSubmit,
   });
 
-  const [selection, setSelection] = useState('');
-  const [filteredSelection, setFilteredSelection] = useState([])
-
-
   return (
     <Dialog open={open} onClose={onClose} aria-labelledby="device-dialog-title">
       <form onSubmit={formik.handleSubmit} noValidate>
