@@ -64,12 +64,7 @@ export const menuItems = [
     icon: VerifiedUserIcon,
     key: "admin.drawer.menu.harbor",
     path: "/admin/harbor",
-  },
-  {
-    icon: HelpCenterIcon,
-    key: "admin.drawer.menu.help",
-    path: "/admin/help",
-  },
+  }
 ];
 
 const AdminDrawer = ({
@@ -144,6 +139,23 @@ const AdminDrawer = ({
             }}
           />
         </ListItem>
+        <ListItem
+          button
+          component={NavLink}
+          to={`/${process.env.PUBLIC_URL}/admin/help`}
+        >
+          <ListItemAvatar>
+              <Avatar sx={{ color: "inherit", bgcolor: "transparent" }}>
+                <HelpCenterIcon />
+              </Avatar>
+            </ListItemAvatar>
+            <ListItemText
+              primary={t("admin.drawer.menu.help")}
+              sx={{
+                display: collapsed ? "none" : "block",
+              }}
+            />
+          </ListItem>
       </List>
     </Box>
   );
