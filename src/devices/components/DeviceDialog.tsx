@@ -15,6 +15,7 @@ import LoadingButton from "@material-ui/lab/LoadingButton";
 import { useFormik } from "formik";
 import { useTranslation } from "react-i18next";
 import * as Yup from "yup";
+import React, { useState } from 'react';
 import { Device } from "../types/device";
 
 const upConnectors = [
@@ -22,6 +23,12 @@ const upConnectors = [
   { label: "deviceManagement.form.upConnector.options.d", value: "Dynamo DB" },
   { label: "deviceManagement.form.upConnector.options.b", value: "Blob Store" },
 ];
+
+const downConnectors = [
+  { label: "deviceManagement.form.downConnector.options.h", value: "HTTP" },
+  { label: "deviceManagement.form.downConnector.options.m", value: "MQTT" },
+];
+
 const deviceTypes = ["Sensor", "Camera"];
 
 type DeviceDialogProps = {
@@ -77,6 +84,10 @@ const DeviceDialog = ({
     onSubmit: handleSubmit,
   });
 
+  const [selection, setSelection] = useState('');
+  const [filteredSelection, setFilteredSelection] = useState([])
+
+
   return (
     <Dialog open={open} onClose={onClose} aria-labelledby="device-dialog-title">
       <form onSubmit={formik.handleSubmit} noValidate>
@@ -115,6 +126,28 @@ const DeviceDialog = ({
             error={formik.touched.firstName && Boolean(formik.errors.firstName)}
             helperText={formik.touched.firstName && formik.errors.firstName}
           />
+          <FormControl component="fieldset" margin="normal">
+            <FormLabel component="legend">
+              {t("deviceManagement.form.downConnector.label")}
+            </FormLabel>
+            <RadioGroup
+              row
+              aria-label="downConnector"
+              name="downConnector"
+              value={formik.values.downConnector}
+              onChange={formik.handleChange}
+            >
+              {downConnectors.map((downConnector) => (
+                <FormControlLabel
+                  key={downConnector.value}
+                  disabled={processing}
+                  value={downConnector.value}
+                  control={<Radio />}
+                  label={t(downConnector.label)}
+                />
+              ))}
+            </RadioGroup>
+          </FormControl>
           <FormControl component="fieldset" margin="normal">
             <FormLabel component="legend">
               {t("deviceManagement.form.upConnector.label")}

@@ -386,6 +386,13 @@
           "b": "Blob Store"
         }
       },
+      "downConnector": {
+        "label": "Protocol",
+        "options": {
+          "m": "MQTT",
+          "h": "HTPP"
+        }
+      },
       "lastName": {
         "label": "Template"
       },
