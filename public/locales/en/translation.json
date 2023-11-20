@@ -265,7 +265,7 @@
       "more": "More on Github",
       "title": "Main Features"
     },
-    "title": "Free and open-source admin application made with React and Material-UI"
+    "title": "open-source application made with TypeScript for managing your IoT devices"
   },
   "notifications": {
     "newComment": "<bold>{{device}}</bold> has written a new comment on your profile",
