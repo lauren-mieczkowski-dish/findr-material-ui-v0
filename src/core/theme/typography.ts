@@ -1,39 +1,39 @@
 const typography = {
-  fontFamily: "Nunito, sans-serif",
+  fontFamily: "Raleway, sans-serif",
   fontWeightMedium: 700,
   fontWeightBold: 800,
   h1: {
     fontWeight: 800,
-    fontSize: "2rem",
-    letterSpacing: 0,
+    fontSize: "3.5rem",
+    letterSpacing: 0.3,
   },
   h2: {
     fontWeight: 800,
-    fontSize: "1.5rem",
-    letterSpacing: 0,
+    fontSize: "2.5rem",
+    letterSpacing: 0.3,
   },
   h3: {
     fontWeight: 800,
-    fontSize: "1.375rem",
-    letterSpacing: 0,
+    fontSize: "2.375rem",
+    letterSpacing: 1.5,
   },
   h4: {
     fontWeight: 800,
-    fontSize: "1.25rem",
-    letterSpacing: 0,
+    fontSize: "2.25rem",
+    letterSpacing: 0.3,
   },
   h5: {
     fontWeight: 800,
-    fontSize: "1.125rem",
+    fontSize: "2.125rem",
     letterSpacing: 0,
   },
   h6: {
     fontWeight: 700,
-    fontSize: "1rem",
+    fontSize: "2rem",
     letterSpacing: 0,
   },
   subtitle1: {
-    letterSpacing: 0,
+    letterSpacing: 0.2,
   },
   subtitle2: {
     letterSpacing: 0,

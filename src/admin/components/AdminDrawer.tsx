@@ -10,9 +10,12 @@ import BarChartIcon from "@material-ui/icons/BarChart";
 import EventIcon from "@material-ui/icons/Event";
 import HelpCenterIcon from "@material-ui/icons/HelpCenter";
 import HomeIcon from "@material-ui/icons/Home";
-import PeopleIcon from "@material-ui/icons/People";
+import SensorIcon from "@material-ui/icons/Sensors";
 import PersonIcon from "@material-ui/icons/Person";
 import SettingsIcon from "@material-ui/icons/Settings";
+import LockIcon from "@material-ui/icons/Lock";
+import HubIcon from '@mui/icons-material/Hub';
+import VerifiedUserIcon from '@mui/icons-material/VerifiedUser';
 import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
 import { useAuth } from "../../auth/contexts/AuthProvider";
@@ -38,25 +41,30 @@ export const menuItems = [
     path: "/admin/dashboard",
   },
   {
-    icon: PeopleIcon,
-    key: "admin.drawer.menu.userManagement",
-    path: "/admin/user-management",
-  },
-  {
-    icon: EventIcon,
-    key: "admin.drawer.menu.calendar",
-    path: "/admin/calendar",
+    icon: SensorIcon,
+    key: "admin.drawer.menu.connect",
+    path: "/admin/connect",
   },
   {
     icon: AccountTreeIcon,
-    key: "admin.drawer.menu.projects",
-    path: "/admin/projects",
+    key: "admin.drawer.menu.deviceManagement",
+    path: "/admin/device-management",
   },
   {
-    icon: HelpCenterIcon,
-    key: "admin.drawer.menu.help",
-    path: "/admin/help",
+    icon: LockIcon,
+    key: "admin.drawer.menu.vault",
+    path: "/admin/vault",
   },
+  {
+    icon: HubIcon,
+    key: "admin.drawer.menu.graphql",
+    path: "/admin/graphql",
+  },
+  {
+    icon: VerifiedUserIcon,
+    key: "admin.drawer.menu.harbor",
+    path: "/admin/harbor",
+  }
 ];
 
 const AdminDrawer = ({
@@ -131,6 +139,23 @@ const AdminDrawer = ({
             }}
           />
         </ListItem>
+        <ListItem
+          button
+          component={NavLink}
+          to={`/${process.env.PUBLIC_URL}/admin/help`}
+        >
+          <ListItemAvatar>
+              <Avatar sx={{ color: "inherit", bgcolor: "transparent" }}>
+                <HelpCenterIcon />
+              </Avatar>
+            </ListItemAvatar>
+            <ListItemText
+              primary={t("admin.drawer.menu.help")}
+              sx={{
+                display: collapsed ? "none" : "block",
+              }}
+            />
+          </ListItem>
       </List>
     </Box>
   );

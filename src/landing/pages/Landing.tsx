@@ -16,11 +16,11 @@ import { useAuth } from "../../auth/contexts/AuthProvider";
 import LandingLayout from "../components/LandingLayout";
 
 const features = [
-  { name: "Bootstraped with Create React App" },
-  { name: "Components & Themes built on top of Material-UI" },
-  { name: "Data Fetching with React Query" },
-  { name: "Written in TypeScript" },
-  { name: "Real-world examples" },
+  { name: "MQTT and HTTP Protocols" },
+  { name: "Easily Connects to S3 and Dynamo DB" },
+  { name: "Vault for Security" },
+  { name: "Integrated with Apollo GraphQL" },
+  { name: "Written in Typescript" },
   { name: "Best Practices" },
   { name: "MIT License" },
 ];

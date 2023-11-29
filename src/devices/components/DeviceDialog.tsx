@@ -15,39 +15,46 @@ import LoadingButton from "@material-ui/lab/LoadingButton";
 import { useFormik } from "formik";
 import { useTranslation } from "react-i18next";
 import * as Yup from "yup";
-import { User } from "../types/user";
+import React, { useState } from 'react';
+import { Device } from "../types/device";
 
-const genders = [
-  { label: "userManagement.form.gender.options.f", value: "F" },
-  { label: "userManagement.form.gender.options.m", value: "M" },
-  { label: "userManagement.form.gender.options.n", value: "NC" },
+const upConnectors = [
+  { label: "deviceManagement.form.upConnector.options.s", value: "S3" },
+  { label: "deviceManagement.form.upConnector.options.d", value: "Dynamo DB" },
+  { label: "deviceManagement.form.upConnector.options.b", value: "Blob Store" },
 ];
-const roles = ["Admin", "Member"];
 
-type UserDialogProps = {
-  onAdd: (user: Partial<User>) => void;
+const downConnectors = [
+  { label: "deviceManagement.form.downConnector.options.h", value: "HTTP" },
+  { label: "deviceManagement.form.downConnector.options.m", value: "MQTT" },
+];
+
+const deviceTypes = ["Sensor", "Camera"];
+
+type DeviceDialogProps = {
+  onAdd: (device: Partial<Device>) => void;
   onClose: () => void;
-  onUpdate: (user: User) => void;
+  onUpdate: (device: Device) => void;
   open: boolean;
   processing: boolean;
-  user?: User;
+  device?: Device;
 };
 
-const UserDialog = ({
+const DeviceDialog = ({
   onAdd,
   onClose,
   onUpdate,
   open,
   processing,
-  user,
-}: UserDialogProps) => {
+  device,
+}: DeviceDialogProps) => {
   const { t } = useTranslation();
 
-  const editMode = Boolean(user && user.id);
+  const editMode = Boolean(device && device.id);
 
-  const handleSubmit = (values: Partial<User>) => {
-    if (user && user.id) {
-      onUpdate({ ...values, id: user.id } as User);
+  const handleSubmit = (values: Partial<Device>) => {
+    if (device && device.id) {
+      onUpdate({ ...values, id: device.id } as Device);
     } else {
       onAdd(values);
     }
@@ -55,16 +62,16 @@ const UserDialog = ({
 
   const formik = useFormik({
     initialValues: {
-      disabled: user ? user.disabled : false,
-      email: user ? user.email : "",
-      firstName: user ? user.firstName : "",
-      gender: user ? user.gender : "F",
-      lastName: user ? user.lastName : "",
-      role: user ? user.role : "",
+      disabled: device ? device.disabled : false,
+      macAddress: device ? device.macAddress : "",
+      firstName: device ? device.firstName : "",
+      upConnector: device ? device.upConnector : "S3",
+      lastName: device ? device.lastName : "",
+      deviceType: device ? device.deviceType : "",
     },
     validationSchema: Yup.object({
-      email: Yup.string()
-        .email(t("common.validations.email"))
+      macAddress: Yup.string()
+        .max(20, t("common.validations.max", { size: 20 }))
         .required(t("common.validations.required")),
       firstName: Yup.string()
         .max(20, t("common.validations.max", { size: 20 }))
@@ -72,18 +79,18 @@ const UserDialog = ({
       lastName: Yup.string()
         .max(30, t("common.validations.max", { size: 30 }))
         .required(t("common.validations.required")),
-      role: Yup.string().required(t("common.validations.required")),
+      deviceType: Yup.string().required(t("common.validations.required")),
     }),
     onSubmit: handleSubmit,
   });
 
   return (
-    <Dialog open={open} onClose={onClose} aria-labelledby="user-dialog-title">
+    <Dialog open={open} onClose={onClose} aria-labelledby="device-dialog-title">
       <form onSubmit={formik.handleSubmit} noValidate>
-        <DialogTitle id="user-dialog-title">
+        <DialogTitle id="device-dialog-title">
           {editMode
-            ? t("userManagement.modal.edit.title")
-            : t("userManagement.modal.add.title")}
+            ? t("deviceManagement.modal.edit.title")
+            : t("deviceManagement.modal.add.title")}
         </DialogTitle>
         <DialogContent>
           <TextField
@@ -91,7 +98,7 @@ const UserDialog = ({
             required
             fullWidth
             id="lastName"
-            label={t("userManagement.form.lastName.label")}
+            label={t("deviceManagement.form.lastName.label")}
             name="lastName"
             autoComplete="family-name"
             autoFocus
@@ -106,7 +113,7 @@ const UserDialog = ({
             required
             fullWidth
             id="firstName"
-            label={t("userManagement.form.firstName.label")}
+            label={t("deviceManagement.form.firstName.label")}
             name="firstName"
             autoComplete="given-name"
             disabled={processing}
@@ -117,22 +124,44 @@ const UserDialog = ({
           />
           <FormControl component="fieldset" margin="normal">
             <FormLabel component="legend">
-              {t("userManagement.form.gender.label")}
+              {t("deviceManagement.form.downConnector.label")}
             </FormLabel>
             <RadioGroup
               row
-              aria-label="gender"
-              name="gender"
-              value={formik.values.gender}
+              aria-label="downConnector"
+              name="downConnector"
+              value={formik.values.downConnector}
               onChange={formik.handleChange}
             >
-              {genders.map((gender) => (
+              {downConnectors.map((downConnector) => (
                 <FormControlLabel
-                  key={gender.value}
+                  key={downConnector.value}
                   disabled={processing}
-                  value={gender.value}
+                  value={downConnector.value}
                   control={<Radio />}
-                  label={t(gender.label)}
+                  label={t(downConnector.label)}
+                />
+              ))}
+            </RadioGroup>
+          </FormControl>
+          <FormControl component="fieldset" margin="normal">
+            <FormLabel component="legend">
+              {t("deviceManagement.form.upConnector.label")}
+            </FormLabel>
+            <RadioGroup
+              row
+              aria-label="upConnector"
+              name="upConnector"
+              value={formik.values.upConnector}
+              onChange={formik.handleChange}
+            >
+              {upConnectors.map((upConnector) => (
+                <FormControlLabel
+                  key={upConnector.value}
+                  disabled={processing}
+                  value={upConnector.value}
+                  control={<Radio />}
+                  label={t(upConnector.label)}
                 />
               ))}
             </RadioGroup>
@@ -141,33 +170,33 @@ const UserDialog = ({
             margin="normal"
             required
             fullWidth
-            id="email"
-            label={t("userManagement.form.email.label")}
-            name="email"
-            autoComplete="email"
+            id="macAddress"
+            label={t("deviceManagement.form.macAddress.label")}
+            name="macAddress"
+            autoComplete="macAddress"
             disabled={processing}
-            value={formik.values.email}
+            value={formik.values.macAddress}
             onChange={formik.handleChange}
-            error={formik.touched.email && Boolean(formik.errors.email)}
-            helperText={formik.touched.email && formik.errors.email}
+            error={formik.touched.macAddress && Boolean(formik.errors.macAddress)}
+            helperText={formik.touched.macAddress && formik.errors.macAddress}
           />
           <TextField
             margin="normal"
             required
-            id="role"
+            id="deviceType"
             disabled={processing}
             fullWidth
             select
-            label={t("userManagement.form.role.label")}
-            name="role"
-            value={formik.values.role}
+            label={t("deviceManagement.form.deviceType.label")}
+            name="deviceType"
+            value={formik.values.deviceType}
             onChange={formik.handleChange}
-            error={formik.touched.role && Boolean(formik.errors.role)}
-            helperText={formik.touched.role && formik.errors.role}
+            error={formik.touched.deviceType && Boolean(formik.errors.deviceType)}
+            helperText={formik.touched.deviceType && formik.errors.deviceType}
           >
-            {roles.map((role) => (
-              <MenuItem key={role} value={role}>
-                {role}
+            {deviceTypes.map((deviceType) => (
+              <MenuItem key={deviceType} value={deviceType}>
+                {deviceType}
               </MenuItem>
             ))}
           </TextField>
@@ -178,7 +207,7 @@ const UserDialog = ({
               onChange={formik.handleChange}
               checked={formik.values.disabled}
               control={<Checkbox />}
-              label={t("userManagement.form.disabled.label")}
+              label={t("deviceManagement.form.disabled.label")}
             />
           </FormControl>
         </DialogContent>
@@ -186,8 +215,8 @@ const UserDialog = ({
           <Button onClick={onClose}>{t("common.cancel")}</Button>
           <LoadingButton loading={processing} type="submit" variant="contained">
             {editMode
-              ? t("userManagement.modal.edit.action")
-              : t("userManagement.modal.add.action")}
+              ? t("deviceManagement.modal.edit.action")
+              : t("deviceManagement.modal.add.action")}
           </LoadingButton>
         </DialogActions>
       </form>
@@ -195,4 +224,4 @@ const UserDialog = ({
   );
 };
 
-export default UserDialog;
+export default DeviceDialog;

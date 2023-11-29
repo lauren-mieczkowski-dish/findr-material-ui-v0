@@ -23,8 +23,6 @@ const ForgotPasswordSubmit = lazy(
 const Login = lazy(() => import("./auth/pages/Login"));
 const Register = lazy(() => import("./auth/pages/Register"));
 
-// Calendar
-const CalendarApp = lazy(() => import("./calendar/pages/CalendarApp"));
 
 // Core
 const Forbidden = lazy(() => import("./core/pages/Forbidden"));
@@ -36,8 +34,8 @@ const UnderConstructions = lazy(
 // Landing
 const Landing = lazy(() => import("./landing/pages/Landing"));
 
-// Users
-const UserManagement = lazy(() => import("./users/pages/UserManagement"));
+// Devices
+const DeviceManagement = lazy(() => import("./devices/pages/DeviceManagement"));
 
 const AppRoutes = () => {
   return (
@@ -45,7 +43,6 @@ const AppRoutes = () => {
       <Route path="/" element={<Landing />} />
       <PrivateRoute path="admin" element={<Admin />}>
         <PrivateRoute path="/" element={<Home />} />
-        <PrivateRoute path="calendar" element={<CalendarApp />} />
         <PrivateRoute path="dashboard" element={<Dashboard />} />
         <PrivateRoute path="faq" element={<Faq />} />
         <PrivateRoute path="help" element={<HelpCenter />} />
@@ -55,7 +52,7 @@ const AppRoutes = () => {
           <PrivateRoute path="password" element={<ProfilePassword />} />
         </PrivateRoute>
         <PrivateRoute
-          path="projects"
+          path="connect"
           element={
             <Navigate
               to={`/${process.env.PUBLIC_URL}/under-construction`}
@@ -63,7 +60,34 @@ const AppRoutes = () => {
             />
           }
         />
-        <PrivateRoute path="user-management" element={<UserManagement />} />
+        <PrivateRoute
+          path="vault"
+          element={
+            <Navigate
+              to={`/${process.env.PUBLIC_URL}/under-construction`}
+              replace
+            />
+          }
+        />
+        <PrivateRoute
+          path="apollo"
+          element={
+            <Navigate
+              to={`/${process.env.PUBLIC_URL}/under-construction`}
+              replace
+            />
+          }
+        />
+        <PrivateRoute
+          path="harbor"
+          element={
+            <Navigate
+              to={`/${process.env.PUBLIC_URL}/under-construction`}
+              replace
+            />
+          }
+        />
+        <PrivateRoute path="device-management" element={<DeviceManagement />} />
       </PrivateRoute>
       <Route path="forgot-password" element={<ForgotPassword />} />
       <Route path="forgot-password-submit" element={<ForgotPasswordSubmit />} />

@@ -10,63 +10,63 @@ import ListItemSecondaryAction from "@material-ui/core/ListItemSecondaryAction";
 import ListItemText from "@material-ui/core/ListItemText";
 import { useTheme } from "@material-ui/core/styles";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
-import PersonIcon from "@material-ui/icons/Person";
+import DevicesOther from "@material-ui/icons/DevicesOther";
 import { useTranslation } from "react-i18next";
 import { Link as RouterLink } from "react-router-dom";
 
-const users = [
+const devices = [
   {
     id: "1",
     firstName: "Rhys",
-    gender: "M",
+    upConnector: "S3",
     lastName: "Arriaga",
-    role: "Admin",
+    deviceType: "Sensor",
   },
   {
     id: "2",
     firstName: "Laura",
-    gender: "F",
+    upConnector: "Dynamo DB",
     lastName: "Core",
-    role: "Member",
+    deviceType: "Camera",
   },
   {
     id: "3",
     firstName: "Joshua",
-    gender: "M",
+    upConnector: "Blob Store",
     lastName: "Jagger",
-    role: "Member",
+    deviceType: "Camera",
   },
 ];
 
-const UsersWidget = () => {
+const DevicesWidget = () => {
   const theme = useTheme();
   const { t } = useTranslation();
 
   return (
     <Card>
-      <CardHeader title={t("dashboard.users.title")} />
+      <CardHeader title={t("dashboard.devices.title")} />
       <CardContent>
         <List>
-          {users.map((user) => (
-            <ListItem disableGutters key={user.id}>
+          {devices.map((device) => (
+            <ListItem disableGutters key={device.id}>
               <ListItemAvatar>
                 <Avatar>
-                  <PersonIcon />
+                  <DevicesOther />
                 </Avatar>
               </ListItemAvatar>
               <ListItemText
-                primary={`${user.lastName} ${user.firstName}`}
+                primary={`${device.lastName} ${device.firstName}`}
                 primaryTypographyProps={{
                   fontWeight: theme.typography.fontWeightMedium,
                 }}
-                secondary={user.role}
+                secondary={device.deviceType}
               />
               <ListItemSecondaryAction>
                 <IconButton
-                  aria-label="Go to user details"
+                  aria-label="Go to device details"
                   component={RouterLink}
                   edge="end"
-                  to={`/${process.env.PUBLIC_URL}/admin/user-management`}
+                  to={`/${process.env.PUBLIC_URL}/admin/device-management`}
                 >
                   <ChevronRightIcon />
                 </IconButton>
@@ -79,4 +79,4 @@ const UsersWidget = () => {
   );
 };
 
-export default UsersWidget;
+export default DevicesWidget;

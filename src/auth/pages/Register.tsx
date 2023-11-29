@@ -17,10 +17,10 @@ import { useSnackbar } from "../../core/contexts/SnackbarProvider";
 import { useRegister } from "../hooks/useRegister";
 import { UserInfo } from "../types/userInfo";
 
-const genders = [
-  { label: "auth.register.form.gender.options.f", value: "F" },
-  { label: "auth.register.form.gender.options.m", value: "M" },
-  { label: "auth.register.form.gender.options.n", value: "NC" },
+const jobTitles = [
+  { label: "auth.register.form.jobTitle.options.e", value: "Engineer" },
+  { label: "auth.register.form.jobTitle.options.d", value: "Developer" },
+  { label: "auth.register.form.jobTitle.options.o", value: "Other" },
 ];
 
 const Register = () => {
@@ -34,7 +34,7 @@ const Register = () => {
     initialValues: {
       email: "",
       firstName: "",
-      gender: "F",
+      jobTitle: "F",
       lastName: "",
     },
     validationSchema: Yup.object({
@@ -104,22 +104,22 @@ const Register = () => {
         />
         <FormControl component="fieldset" margin="normal">
           <FormLabel component="legend">
-            {t("auth.register.form.gender.label")}
+            {t("auth.register.form.jobTitle.label")}
           </FormLabel>
           <RadioGroup
             row
-            aria-label="gender"
-            name="gender"
-            value={formik.values.gender}
+            aria-label="jobTitle"
+            name="jobTitle"
+            value={formik.values.jobTitle}
             onChange={formik.handleChange}
           >
-            {genders.map((gender) => (
+            {jobTitles.map((jobTitle) => (
               <FormControlLabel
                 control={<Radio />}
-                key={gender.value}
+                key={jobTitle.value}
                 disabled={isRegistering}
-                label={t(gender.label)}
-                value={gender.value}
+                label={t(jobTitle.label)}
+                value={jobTitle.value}
               />
             ))}
           </RadioGroup>

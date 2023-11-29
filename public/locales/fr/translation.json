@@ -2,13 +2,12 @@
   "admin": {
     "drawer": {
       "menu": {
-        "calendar": "Calendrier",
         "dashboard": "Dashboard",
         "help": "Aide",
         "home": "Home",
         "projects": "Projets",
         "settings": "Paramètres",
-        "userManagement": "Utilisateurs"
+        "deviceManagement": "Utilisateurs"
       }
     },
     "header": {
@@ -110,7 +109,7 @@
         "firstName": {
           "label": "Prénom"
         },
-        "gender": {
+        "jobTitle": {
           "label": "Genre",
           "options": {
             "f": "F",
@@ -128,44 +127,6 @@
       "submit": "S'enregistrer",
       "title": "S'enregistrer"
     }
-  },
-  "calendar": {
-    "confirmations": {
-      "delete": "Etes-vous certain de vouloir supprimer cet évènement?"
-    },
-    "form": {
-      "color": {
-        "label": "Couleur"
-      },
-      "description": {
-        "label": "Description"
-      },
-      "end": {
-        "label": "Date de fin"
-      },
-      "start": {
-        "label": "Date de début"
-      },
-      "title": {
-        "label": "Titre"
-      }
-    },
-    "modal": {
-      "add": {
-        "action": "Ajouter",
-        "title": "Ajouter un évènement"
-      },
-      "edit": {
-        "action": "Modifier",
-        "title": "Modifier l'évènement"
-      }
-    },
-    "notifications": {
-      "addSuccess": "{{event}} a été ajouté!",
-      "deleteSuccess": "L'évènement a été supprimé!",
-      "updateSuccess": "{{event}} a été modifié!"
-    },
-    "title": "Calendrier"
   },
   "common": {
     "backHome": "Retourner sur la page d'accueil",
@@ -224,7 +185,7 @@
     "overview": {
       "orders": "Commandes",
       "sales": "Ventes",
-      "users": "Utilisateurs",
+      "devices": "Utilisateurs",
       "visits": "Visites"
     },
     "progress": {
@@ -256,7 +217,7 @@
       },
       "title": "Progrès des équipes"
     },
-    "users": {
+    "devices": {
       "title": "Utilisateurs récents"
     },
     "visitProgress": {
@@ -304,7 +265,7 @@
     "title": "Open-source dashboard application fait avec React"
   },
   "notifications": {
-    "newComment": "<bold>{{user}}</bold> a écrit un commentaire sur votre profil",
+    "newComment": "<bold>{{device}}</bold> a écrit un commentaire sur votre profil",
     "unreadMessages": "Vous avez <bold>{{quantity}}</bold> messages non-lus"
   },
   "profile": {
@@ -313,9 +274,9 @@
       "logs": {
         "eventAdded": "<bold>Vous</bold> avez ajouté un nouvel évènement: <bold>{{resource}}</bold>",
         "eventUpdated": "<bold>Vous</bold> avez modifié l'évènement: <bold>{{resource}}</bold>",
-        "userAdded": "<bold>Vous</bold> avez ajouté un nouvel utilisateur: <bold>{{resource}}</bold>",
-        "userDeleted": "<bold>Vous</bold> avez supprimé l'utilisateur: <bold>{{resource}}</bold>",
-        "userUpdated": "<bold>Vous</bold> avez modifié l'utilisateur: <bold>{{resource}}</bold>"
+        "deviceAdded": "<bold>Vous</bold> avez ajouté un nouvel utilisateur: <bold>{{resource}}</bold>",
+        "deviceDeleted": "<bold>Vous</bold> avez supprimé l'utilisateur: <bold>{{resource}}</bold>",
+        "deviceUpdated": "<bold>Vous</bold> avez modifié l'utilisateur: <bold>{{resource}}</bold>"
       }
     },
     "completion": {
@@ -329,7 +290,7 @@
         "firstName": {
           "label": "Prénom"
         },
-        "gender": {
+        "jobTitle": {
           "label": "Genre",
           "options": {
             "f": "Femme",
@@ -400,7 +361,7 @@
       "title": "Paramètres"
     }
   },
-  "userManagement": {
+  "deviceManagement": {
     "confirmations": {
       "delete": "Etes-vous certain de vouloir supprimer cet utilisateur?"
     },
@@ -414,7 +375,7 @@
       "firstName": {
         "label": "Prénom"
       },
-      "gender": {
+      "jobTitle": {
         "label": "Genre",
         "options": {
           "f": "Femme",
@@ -425,7 +386,7 @@
       "lastName": {
         "label": "Nom"
       },
-      "role": {
+      "deviceType": {
         "label": "Rôle"
       }
     },
@@ -440,17 +401,17 @@
       }
     },
     "notifications": {
-      "addSuccess": "{{user}} a été ajouté!",
+      "addSuccess": "{{device}} a été ajouté!",
       "deleteSuccess": "L(es) utilisateur(s) ont été supprimés!",
-      "updateSuccess": "{{user}} a été modifié!"
+      "updateSuccess": "{{device}} a été modifié!"
     },
     "table": {
       "headers": {
         "actions": "Actions",
-        "gender": "Genre",
-        "role": "Rôle",
+        "jobTitle": "Genre",
+        "deviceType": "Rôle",
         "status": "Statut",
-        "user": "Utilisateur"
+        "device": "Utilisateur"
       }
     },
     "toolbar": {

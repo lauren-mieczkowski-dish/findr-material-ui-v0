@@ -15,7 +15,7 @@ import SalesByAgeWidget from "../widgets/SalesByAgeWidget";
 import SalesByCategoryWidget from "../widgets/SalesByCategoryWidget";
 import SalesHistoryWidget from "../widgets/SalesHistoryWidget";
 import TeamProgressWidget from "../widgets/TeamProgressWidget";
-import UsersWidget from "../widgets/UsersWidget";
+import DevicesWidget from "../widgets/DevicesWidget";
 
 const overviewItems = [
   {
@@ -31,7 +31,7 @@ const overviewItems = [
     value: "149",
   },
   {
-    unit: "dashboard.overview.users",
+    unit: "dashboard.overview.devices",
     value: "657",
   },
 ];
@@ -86,7 +86,7 @@ const Dashboard = () => {
           />
         </Grid>
         <Grid item xs={12} md={4}>
-          <UsersWidget />
+          <DevicesWidget />
         </Grid>
         <Grid item xs={12} md={8}>
           <TeamProgressWidget />

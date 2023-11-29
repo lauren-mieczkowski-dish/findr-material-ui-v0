@@ -7,52 +7,52 @@ import AdminToolbar from "../../admin/components/AdminToolbar";
 import ConfirmDialog from "../../core/components/ConfirmDialog";
 import SelectToolbar from "../../core/components/SelectToolbar";
 import { useSnackbar } from "../../core/contexts/SnackbarProvider";
-import UserDialog from "../components/UserDialog";
-import UserTable from "../components/UserTable";
-import { useAddUser } from "../hooks/useAddUser";
-import { useDeleteUsers } from "../hooks/useDeleteUsers";
-import { useUpdateUser } from "../hooks/useUpdateUser";
-import { useUsers } from "../hooks/useUsers";
-import { User } from "../types/user";
+import DeviceDialog from "../components/DeviceDialog";
+import DeviceTable from "../components/DeviceTable";
+import { useAddDevice } from "../hooks/useAddDevice";
+import { useDeleteDevices } from "../hooks/useDeleteDevices";
+import { useUpdateDevice } from "../hooks/useUpdateDevice";
+import { useDevices } from "../hooks/useDevices";
+import { Device } from "../types/device";
 
-const UserManagement = () => {
+const DeviceManagement = () => {
   const snackbar = useSnackbar();
   const { t } = useTranslation();
 
   const [openConfirmDeleteDialog, setOpenConfirmDeleteDialog] = useState(false);
-  const [openUserDialog, setOpenUserDialog] = useState(false);
+  const [openDeviceDialog, setOpenDeviceDialog] = useState(false);
   const [selected, setSelected] = useState<string[]>([]);
-  const [userDeleted, setUserDeleted] = useState<string[]>([]);
-  const [userUpdated, setUserUpdated] = useState<User | undefined>(undefined);
+  const [deviceDeleted, setDeviceDeleted] = useState<string[]>([]);
+  const [deviceUpdated, setDeviceUpdated] = useState<Device | undefined>(undefined);
 
-  const { addUser, isAdding } = useAddUser();
-  const { deleteUsers, isDeleting } = useDeleteUsers();
-  const { isUpdating, updateUser } = useUpdateUser();
-  const { data } = useUsers();
+  const { addDevice, isAdding } = useAddDevice();
+  const { deleteDevices, isDeleting } = useDeleteDevices();
+  const { isUpdating, updateDevice } = useUpdateDevice();
+  const { data } = useDevices();
 
   const processing = isAdding || isDeleting || isUpdating;
 
-  const handleAddUser = async (user: Partial<User>) => {
-    addUser(user as User)
+  const handleAddDevice = async (device: Partial<Device>) => {
+    addDevice(device as Device)
       .then(() => {
         snackbar.success(
-          t("userManagement.notifications.addSuccess", {
-            user: `${user.firstName} ${user.lastName}`,
+          t("DeviceManagement.notifications.addSuccess", {
+            device: `${device.firstName} ${device.lastName}`,
           })
         );
-        setOpenUserDialog(false);
+        setOpenDeviceDialog(false);
       })
       .catch(() => {
         snackbar.error(t("common.errors.unexpected.subTitle"));
       });
   };
 
-  const handleDeleteUsers = async () => {
-    deleteUsers(userDeleted)
+  const handleDeleteDevices = async () => {
+    deleteDevices(deviceDeleted)
       .then(() => {
-        snackbar.success(t("userManagement.notifications.deleteSuccess"));
+        snackbar.success(t("DeviceManagement.notifications.deleteSuccess"));
         setSelected([]);
-        setUserDeleted([]);
+        setDeviceDeleted([]);
         setOpenConfirmDeleteDialog(false);
       })
       .catch(() => {
@@ -60,15 +60,15 @@ const UserManagement = () => {
       });
   };
 
-  const handleUpdateUser = async (user: User) => {
-    updateUser(user)
+  const handleUpdateDevice = async (device: Device) => {
+    updateDevice(device)
       .then(() => {
         snackbar.success(
-          t("userManagement.notifications.updateSuccess", {
-            user: `${user.firstName} ${user.lastName}`,
+          t("DeviceManagement.notifications.updateSuccess", {
+            device: `${device.firstName} ${device.lastName}`,
           })
         );
-        setOpenUserDialog(false);
+        setOpenDeviceDialog(false);
       })
       .catch(() => {
         snackbar.error(t("common.errors.unexpected.subTitle"));
@@ -83,19 +83,19 @@ const UserManagement = () => {
     setOpenConfirmDeleteDialog(false);
   };
 
-  const handleCloseUserDialog = () => {
-    setUserUpdated(undefined);
-    setOpenUserDialog(false);
+  const handleCloseDeviceDialog = () => {
+    setDeviceUpdated(undefined);
+    setOpenDeviceDialog(false);
   };
 
-  const handleOpenConfirmDeleteDialog = (userIds: string[]) => {
-    setUserDeleted(userIds);
+  const handleOpenConfirmDeleteDialog = (deviceIds: string[]) => {
+    setDeviceDeleted(deviceIds);
     setOpenConfirmDeleteDialog(true);
   };
 
-  const handleOpenUserDialog = (user?: User) => {
-    setUserUpdated(user);
-    setOpenUserDialog(true);
+  const handleOpenDeviceDialog = (device?: Device) => {
+    setDeviceUpdated(device);
+    setOpenDeviceDialog(true);
   };
 
   const handleSelectedChange = (newSelected: string[]) => {
@@ -106,12 +106,12 @@ const UserManagement = () => {
     <React.Fragment>
       <AdminAppBar>
         {!selected.length ? (
-          <AdminToolbar title={t("userManagement.toolbar.title")}>
+          <AdminToolbar title={t("deviceManagement.toolbar.title")}>
             <Fab
               aria-label="logout"
               color="primary"
               disabled={processing}
-              onClick={() => handleOpenUserDialog()}
+              onClick={() => handleOpenDeviceDialog()}
               size="small"
             >
               <AddIcon />
@@ -126,34 +126,34 @@ const UserManagement = () => {
           />
         )}
       </AdminAppBar>
-      <UserTable
+      <DeviceTable
         processing={processing}
         onDelete={handleOpenConfirmDeleteDialog}
-        onEdit={handleOpenUserDialog}
+        onEdit={handleOpenDeviceDialog}
         onSelectedChange={handleSelectedChange}
         selected={selected}
-        users={data}
+        devices={data}
       />
       <ConfirmDialog
-        description={t("userManagement.confirmations.delete")}
+        description={t("deviceManagement.confirmations.delete")}
         pending={processing}
         onClose={handleCloseConfirmDeleteDialog}
-        onConfirm={handleDeleteUsers}
+        onConfirm={handleDeleteDevices}
         open={openConfirmDeleteDialog}
         title={t("common.confirmation")}
       />
-      {openUserDialog && (
-        <UserDialog
-          onAdd={handleAddUser}
-          onClose={handleCloseUserDialog}
-          onUpdate={handleUpdateUser}
-          open={openUserDialog}
+      {openDeviceDialog && (
+        <DeviceDialog
+          onAdd={handleAddDevice}
+          onClose={handleCloseDeviceDialog}
+          onUpdate={handleUpdateDevice}
+          open={openDeviceDialog}
           processing={processing}
-          user={userUpdated}
+          device={deviceUpdated}
         />
       )}
     </React.Fragment>
   );
 };
 
-export default UserManagement;
+export default DeviceManagement;

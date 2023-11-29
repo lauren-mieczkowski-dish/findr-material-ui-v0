@@ -5,7 +5,7 @@ import events from "./events.json";
 import notifications from "./notifications.json";
 import profileInfo from "./profileInfo.json";
 import userInfo from "./userInfo.json";
-import users from "./users.json";
+import devices from "./devices.json";
 
 const now = Date.now();
 
@@ -48,10 +48,10 @@ mock.onGet("/api/notifications").reply(200, notifications);
 mock.onGet("/api/profile-info").reply(200, profileInfo);
 mock.onPut("/api/profile-info").reply(({ data }) => [200, data]);
 
-// Users
-mock.onDelete("/api/users").reply(({ data }) => [200, data]);
-mock.onGet("/api/users").reply(200, users);
+// Devices
+mock.onDelete("/api/devices").reply(({ data }) => [200, data]);
+mock.onGet("/api/devices").reply(200, devices);
 mock
-  .onPost("/api/users")
+  .onPost("/api/devices")
   .reply(({ data }) => [201, { ...JSON.parse(data), id: generateId() }]);
-mock.onPut("/api/users").reply(({ data }) => [200, data]);
+mock.onPut("/api/devices").reply(({ data }) => [200, data]);

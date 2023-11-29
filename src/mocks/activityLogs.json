@@ -1,47 +1,47 @@
 [
   {
     "id": "1",
-    "actor": "You",
-    "code": "eventAdded",
+    "actor": "Praveen Mada",
+    "code": "deviceDeleted",
     "createdAt": 1617868226000,
     "params": {
-      "resource": "React Summit"
+      "resource": "Sensor 123"
     }
   },
   {
     "id": "2",
-    "actor": "John Smith",
-    "code": "eventUpdated",
+    "actor": "Praveen Mada",
+    "code": "deviceUpdated",
     "createdAt": 1617868226000,
     "params": {
-      "resource": "React Summit"
+      "resource": "Sensor 456"
     }
   },
   {
     "id": "3",
-    "actor": "John Smith",
-    "code": "userDeleted",
+    "actor": "Praveen Mada",
+    "code": "deviceDeleted",
     "createdAt": 1617868226000,
     "params": {
-      "resource": "John Smith"
+      "resource": "Sensor 789"
     }
   },
   {
     "id": "4",
-    "actor": "John Smith",
-    "code": "userUpdated",
+    "actor": "Praveen Mada",
+    "code": "deviceUpdated",
     "createdAt": 1617868226000,
     "params": {
-      "resource": "John Smith"
+      "resource": "Camera 123"
     }
   },
   {
     "id": "5",
-    "actor": "John Smith",
-    "code": "userAdded",
+    "actor": "Praveen Mada",
+    "code": "deviceAdded",
     "createdAt": 1617868226000,
     "params": {
-      "resource": "John Smith"
+      "resource": "Camera 456"
     }
   }
 ]

@@ -18,7 +18,7 @@ const WelcomeWidget = () => {
         </Typography>
         <Typography
           component="div"
-          sx={{ fontWeight: 300, mb: 3 }}
+          sx={{ fontWeight: 300, mb: 4 }}
           variant="h1"
         >
           {t("admin.home.welcome.subTitle")}
@@ -32,9 +32,9 @@ const WelcomeWidget = () => {
         >
           {t("admin.home.welcome.message")}
         </Typography>
-        <SvgContainer>
+        {/* <SvgContainer>
           <WelcomeSvg />
-        </SvgContainer>
+        </SvgContainer> */}
       </CardContent>
     </Card>
   );

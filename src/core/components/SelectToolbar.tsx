@@ -8,7 +8,7 @@ import { useTranslation } from "react-i18next";
 
 interface SelectToolbarProps {
   onCancel: () => void;
-  onDelete: (userIds: string[]) => void;
+  onDelete: (deviceIds: string[]) => void;
   processing: boolean;
   selected: string[];
 }

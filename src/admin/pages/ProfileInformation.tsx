@@ -18,10 +18,10 @@ import { useSnackbar } from "../../core/contexts/SnackbarProvider";
 import { useProfileInfo } from "../hooks/useProfileInfo";
 import { ProfileInfo } from "../types/profileInfo";
 
-const genders = [
-  { label: "profile.info.form.gender.options.f", value: "F" },
-  { label: "profile.info.form.gender.options.m", value: "M" },
-  { label: "profile.info.form.gender.options.n", value: "NC" },
+const jobTitles = [
+  { label: "profile.info.form.jobTitle.options.e", value: "Engineer" },
+  { label: "profile.info.form.jobTitle.options.d", value: "Developer" },
+  { label: "profile.info.form.jobTitle.options.o", value: "Other" },
 ];
 
 const ProfileInformation = () => {
@@ -35,7 +35,7 @@ const ProfileInformation = () => {
     initialValues: {
       email: data ? data.email : "",
       firstName: data ? data.firstName : "",
-      gender: data ? data.gender : undefined,
+      jobTitle: data ? data.jobTitle : undefined,
       job: data ? data.job : "",
       lastName: data ? data.lastName : "",
     },
@@ -99,21 +99,21 @@ const ProfileInformation = () => {
           />
           <FormControl component="fieldset" margin="normal">
             <FormLabel component="legend">
-              {t("profile.info.form.gender.label")}
+              {t("profile.info.form.jobTitle.label")}
             </FormLabel>
             <RadioGroup
               row
-              aria-label="gender"
-              name="gender"
-              value={formik.values.gender}
+              aria-label="jobTitle"
+              name="jobTitle"
+              value={formik.values.jobTitle}
               onChange={formik.handleChange}
             >
-              {genders.map((gender) => (
+              {jobTitles.map((jobTitle) => (
                 <FormControlLabel
-                  key={gender.value}
-                  value={gender.value}
+                  key={jobTitle.value}
+                  value={jobTitle.value}
                   control={<Radio />}
-                  label={t(gender.label)}
+                  label={t(jobTitle.label)}
                 />
               ))}
             </RadioGroup>
